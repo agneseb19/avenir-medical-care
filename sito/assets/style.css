@@ -616,3 +616,13 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
 .partner-piede:hover { transform: none; box-shadow: none; opacity: .8; }
 .partner-piede img { height: 30px; }
 @media (max-width: 760px) { .partner { flex-direction: column; align-items: flex-start; gap: 8px; } .partner img { height: 30px; } }
+
+/* telefono: pulsanti della hero affiancati */
+@media (max-width: 760px) {
+  .hero-azioni { flex-direction: row !important; flex-wrap: nowrap; align-items: center !important; gap: 8px; }
+  .hero-azioni .btn { height: 48px; font-size: 15px; padding: 0 16px; gap: 8px; flex: 0 1 auto; white-space: nowrap; justify-content: center !important; }
+  .hero-azioni .btn .ico { display: none; }
+  .hero-azioni .btn-vuoto { padding: 0 14px; font-size: 14.5px; }
+  .hero-azioni .btn-vuoto svg { width: 16px; height: 16px; }
+}
+@media (max-width: 760px) { .hero-azioni { justify-content: center !important; } }

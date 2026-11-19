@@ -720,3 +720,22 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
   .inc-voce small { font-size: 13px !important; }
   .inc-piu { width: 26px !important; height: 26px !important; font-size: 16px !important; }
 }
+
+/* + centrato tra i due riquadri e riquadri compatti */
+.incontro { position: relative; gap: 14px; }
+.inc-piu { position: absolute !important; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2; width: 32px !important; height: 32px !important; padding: 0; font-size: 0 !important; box-shadow: 0 0 0 4px var(--carta); }
+.inc-piu::before, .inc-piu::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; border-radius: 1px; background: #fff; transform: translate(-50%, -50%); }
+.inc-piu::after { transform: translate(-50%, -50%) rotate(90deg); }
+@media (max-width: 760px) {
+  .incontro { gap: 10px; }
+  .inc-voce { flex-direction: row !important; justify-content: center !important; text-align: left; min-height: 64px; padding: 10px 12px; gap: 8px; border-radius: 16px; }
+  .inc-logo { max-width: 104px; }
+  .inc-foto { width: 34px; height: 34px; box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--rosa); }
+  .inc-voce b { font-size: 13px !important; line-height: 1.2; }
+  .inc-voce small { display: none; }
+  .inc-piu { width: 26px !important; height: 26px !important; }
+  .inc-piu::before, .inc-piu::after { width: 10px; }
+}
+@media (max-width: 760px) { .nasc-mob { display: none; } .incontro .inc-voce + .inc-piu + .inc-voce { padding-left: 20px; } }
+.incontro .inc-voce { flex: 1 1 50% !important; box-sizing: border-box; }
+@media (max-width: 760px) { .incontro .inc-voce + .inc-piu + .inc-voce { padding-left: 22px; padding-right: 8px; } .incontro .inc-voce:first-child { padding-right: 22px; padding-left: 8px; } }

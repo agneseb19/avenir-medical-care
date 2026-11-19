@@ -392,7 +392,22 @@ chi = f'''
     </div>
   </div></section>
 
-  <section class="sez" id="dottoressa" style="padding-top:0"><div class="wrap dott-grid">
+  <section class="scuro"><div class="wrap split">
+    <div>
+      <a href="https://praemedica.it" target="_blank" rel="noopener" data-su style="display:inline-block;margin-bottom:22px"><img src="assets/img/praemedica-logo-bianco.png" alt="Praemedica" width="617" height="124" style="height:44px;width:auto"></a>
+      <h2 class="h2" data-split>Il partner organizzativo</h2>
+      <p class="lead" data-su>Praemedica è un centro diagnostico polispecialistico nato nel 2025, con oltre venti specialità e una diagnostica per immagini completa. Porta ad Avenir la sua organizzazione: prenotazioni, accoglienza e tempi di attesa brevi.</p>
+      <div class="righe">
+        {riga('scudo', 'Più di 20 specialità', 'Dalla cardiologia all’ortopedia')}
+        {riga('strati', 'Diagnostica per immagini', 'Mammografia 3D, MOC, radiografie')}
+        {riga('cal', 'Prenotazioni semplici', 'Telefono, WhatsApp e online')}
+      </div>
+      <div style="margin-top:28px" data-su>{btn('Visita il sito di Praemedica', 'https://praemedica.it', 'btn-chiaro', extra=' target="_blank" rel="noopener"')}</div>
+    </div>
+    <div class="split-foto"><img src="assets/img/pm-opt.jpg" alt="L’ortopantomografo di Praemedica" loading="lazy"></div>
+  </div></section>
+
+  <section class="sez" id="dottoressa"><div class="wrap dott-grid">
     <div class="dott-foto" data-par="-6"><img src="assets/img/svegliati-ritratto.jpg" alt="La dottoressa Francesca Svegliati, in camice bianco, alla scrivania dello studio" loading="lazy"></div>
     <div>
       <span class="sopra" data-su>La dottoressa</span>
@@ -421,20 +436,6 @@ chi = f'''
     </div>
   </div></section>
 
-  <section class="scuro"><div class="wrap split">
-    <div>
-      <a href="https://praemedica.it" target="_blank" rel="noopener" data-su style="display:inline-block;margin-bottom:22px"><img src="assets/img/praemedica-logo-bianco.png" alt="Praemedica" width="617" height="124" style="height:44px;width:auto"></a>
-      <h2 class="h2" data-split>Il partner organizzativo</h2>
-      <p class="lead" data-su>Praemedica è un centro diagnostico polispecialistico nato nel 2025, con oltre venti specialità e una diagnostica per immagini completa. Porta ad Avenir la sua organizzazione: prenotazioni, accoglienza e tempi di attesa brevi.</p>
-      <div class="righe">
-        {riga('scudo', 'Più di 20 specialità', 'Dalla cardiologia all’ortopedia')}
-        {riga('strati', 'Diagnostica per immagini', 'Mammografia 3D, MOC, radiografie')}
-        {riga('cal', 'Prenotazioni semplici', 'Telefono, WhatsApp e online')}
-      </div>
-      <div style="margin-top:28px" data-su>{btn('Visita il sito di Praemedica', 'https://praemedica.it', 'btn-chiaro', extra=' target="_blank" rel="noopener"')}</div>
-    </div>
-    <div class="split-foto"><img src="assets/img/pm-opt.jpg" alt="L’ortopantomografo di Praemedica" loading="lazy"></div>
-  </div></section>
 
   {cta('Vieni a conoscerci', 'Chiama la segreteria per fissare la tua prima visita.', 'donna4.jpg')}
 '''

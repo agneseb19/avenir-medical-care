@@ -779,3 +779,7 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
   .footer-legale { margin-top: 28px; }
   .crediti { font-size: 12px !important; }
 }
+
+/* blocco finale: la foto copre sempre tutto il riquadro, anche durante la parallasse */
+.cta-bg { inset: -14% 0 !important; }
+.cta-bg img { height: 100% !important; }

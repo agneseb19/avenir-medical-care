@@ -501,3 +501,89 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
 @media (max-width: 760px) { .prep { grid-template-columns: 1fr; } }
 
 .dott div > .btn { margin-top: 0; }
+
+/* ================= TELEFONO: più leggibile, più corto ================= */
+@media (max-width: 760px) {
+  :root { --pad: 20px; }
+  body { font-size: 17px; line-height: 1.6; }
+  .h2 { font-size: 30px; }
+  .lead { font-size: 17.5px; line-height: 1.55; }
+  .sopra { font-size: 15px; margin-bottom: 10px; }
+  .sez { padding: 56px 0; }
+  .testa { margin-bottom: 26px; gap: 14px; }
+  .testa p { font-size: 17px; }
+
+  /* testi minimi a 15-16px */
+  .card p, .fase p, .passo p, .riga small, .dato small, .gruppo li, .oc p, .prep-col ul, .tappa p, .faq .risp, .contatto small, .orari, .storia-passo p { font-size: 16px; }
+  .chips span, .competenze span { font-size: 15px; }
+  .briciole { font-size: 15px; }
+  .footer p, .footer ul, .footer-legale, .crediti, .modulo .nota, .storia-fig figcaption, .prova-nota, .prova-sotto { font-size: 15px; }
+  .etichetta { font-size: 14px; }
+  .btn { height: 54px; font-size: 16px; }
+
+  /* gruppi di card: un carosello da scorrere col dito invece di una colonna infinita */
+  .griglia, .fasi, .valori, .dati4, .gruppi, .passi, .intro-dati, .tempo, .logo-storia {
+    display: flex !important; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory;
+    gap: 12px; margin-inline: calc(var(--pad) * -1); padding: 4px var(--pad) 10px; scroll-padding-inline: var(--pad);
+    scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .griglia::-webkit-scrollbar, .fasi::-webkit-scrollbar, .valori::-webkit-scrollbar, .dati4::-webkit-scrollbar, .gruppi::-webkit-scrollbar, .passi::-webkit-scrollbar, .intro-dati::-webkit-scrollbar, .tempo::-webkit-scrollbar, .logo-storia::-webkit-scrollbar { display: none; }
+  .griglia > *, .fasi > *, .valori > *, .dati4 > *, .gruppi > *, .passi > .passo, .intro-dati > *, .tempo > .tappa, .logo-storia > * { flex: 0 0 80%; scroll-snap-align: start; }
+  .passi-linea, .tempo-linea, .tappa::before { display: none; }
+  .tempo { padding-left: var(--pad); }
+  .card-f { aspect-ratio: 16/10; }
+  /* segnale che si può scorrere */
+  .scorri-hint { display: flex; }
+
+  /* hero più corte */
+  .hero { padding: 84px 8px 0; }
+  .hero-grid { padding: 32px 18px 28px; gap: 24px; }
+  .hero h1 { font-size: 36px; margin-top: 14px; }
+  .hero .lead { margin-top: 14px; }
+  .hero-azioni { margin-top: 22px; flex-direction: column; align-items: stretch; }
+  .hero-azioni .btn { justify-content: space-between; }
+  .hero-azioni .btn-vuoto { justify-content: center; }
+  .hero-fatti { display: none; }
+  .hero-media { max-width: none; width: 100%; aspect-ratio: 16/11; margin-top: 0; }
+  .hero-foto { border-radius: 200px 200px 22px 22px; }
+  .hero-arco { display: none; }
+  .hero-pag .hero-media { aspect-ratio: 16/10; }
+  .hero-pag .hero-foto { border-radius: 22px; }
+  .hero-pag h1 { font-size: 34px; }
+
+  /* foto più basse */
+  .split { gap: 24px; }
+  .split-foto, .split-foto.largo { aspect-ratio: 16/10; border-radius: 22px; }
+  .intro-foto { height: 260px; }
+  .if-1 { inset: 0 30% 0 0; }
+  .if-2 { width: 46%; }
+  .intro-frase { font-size: 22px; }
+  .dott-foto { max-width: 300px; }
+  .cta { min-height: 420px; border-radius: 26px; }
+  .cta h2 { font-size: 32px; }
+  .tomo, .scuro { padding: 56px 0; border-radius: 26px; margin: 0 8px; }
+  .storia { height: 330vh; }
+
+  /* contatti compatti */
+  .contatti-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .contatto { padding: 18px; }
+  .contatto b { font-size: 16px; word-break: break-word; }
+  .contatto .riga-ico { margin-bottom: 6px; width: 38px; height: 38px; }
+  .mappa { min-height: 260px; }
+
+  /* footer compatto */
+  .footer { padding: 56px 0 28px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+  .footer-grid > :first-child { grid-column: 1 / -1; }
+  .footer-gigante { margin: 36px 0 16px; }
+}
+.scorri-hint { display: none; align-items: center; gap: 8px; font-size: 14px; color: var(--grigio); margin-top: 6px; }
+.scorri-hint svg { width: 16px; height: 16px; animation: spingi 1.6s var(--ease) infinite; }
+@keyframes spingi { 50% { transform: translateX(5px); } }
+
+@media (max-width: 760px) {
+  .correlati { display: none; }
+  .intro-foto { display: none; }
+  .storia { height: 280vh; }
+  .cta { margin-top: 24px !important; }
+}

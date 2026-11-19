@@ -109,7 +109,7 @@ ALTRI = {
 
 
 def correlati(*chiavi):
-    return f'''<section class="sez" style="padding-top:0"><div class="wrap">
+    return f'''<section class="sez correlati" style="padding-top:0"><div class="wrap">
     {testa('Altri esami', 'Potrebbe interessarti anche')}
     <div class="griglia">{''.join(ALTRI[k] for k in chiavi)}</div>
   </div></section>'''
@@ -392,22 +392,17 @@ chi = f'''
     </div>
   </div></section>
 
-  <section class="sez" id="dottoressa" style="padding-top:0"><div class="wrap dott-grid">
-    <div class="dott-foto" data-par="-6"><img src="assets/img/svegliati-2.jpg" style="object-position:45% 0%" alt="La dottoressa Francesca Svegliati sorridente, in camice bianco" loading="lazy"></div>
+  <section class="sez" id="dottoressa" style="padding-top:0"><div class="wrap split" style="align-items:start">
     <div>
-      <span class="sopra" data-su>Le competenze</span>
-      <h2 class="h2" data-split>Tutta la diagnostica del seno</h2>
-      <p class="lead" data-su style="margin-top:16px">La dottoressa Svegliati segue ogni fase: dalla prima visita agli esami di secondo livello, fino agli eventuali prelievi.</p>
-      <div class="competenze" data-su>
-        <span>{ico('cuore')}Visita senologica</span>
-        <span>{ico('strati')}Mammografia con tomosintesi</span>
-        <span>{ico('scudo')}Ecografia mammaria</span>
-        <span>{ico('scintilla')}Biopsia stereotassica</span>
-        <span>{ico('scintilla')}Biopsia tru-cut ecoguidata</span>
-        <span>{ico('doc')}RM mammaria</span>
-      </div>
-      <p data-su style="margin-top:22px;font-size:14px;color:var(--grigio)">Si dedica anche alla divulgazione scientifica, con seminari e conferenze sulla prevenzione.</p>
-      <div data-su style="margin-top:28px">{btn('Visita il sito della dottoressa', 'https://www.francescasvegliati.it', extra=' target="_blank" rel="noopener"')}</div>
+      <span class="sopra" data-su>Con la dottoressa</span>
+      <h2 class="h2" data-split>Cosa fa per te ad Avenir</h2>
+      <p class="lead" data-su>Ad Avenir la dottoressa Svegliati segue la senologia: tre esami, che si possono fare anche nella stessa mattina.</p>
+      <div data-su style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">{btn('Prenota con la dottoressa', 'contatti.html#prenota')}<a class="btn btn-vuoto" href="https://www.francescasvegliati.it" target="_blank" rel="noopener">Il suo sito personale</a></div>
+    </div>
+    <div class="righe">
+      {riga('cuore', 'Visita senologica', 'Colloquio, esame clinico e lettura dei tuoi esami', 'visita-senologica.html')}
+      {riga('scudo', 'Ecografia mammaria', 'Ultrasuoni, senza radiazioni e indolore', 'ecografia-mammaria.html')}
+      {riga('strati', 'Mammografia 3D con tomosintesi', 'Il seno ricostruito in strati sottili', 'mammografia-3d.html')}
     </div>
   </div></section>
 

@@ -99,11 +99,12 @@
   });
 
   /* ---------- hero ---------- */
+  const R = matchMedia('(max-width: 760px)').matches ? '0px' : '999px 999px 28px 28px';
   const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
   tl.from('.hero-box', { scale: .965, opacity: 0, duration: 1.2 })
     .from('.hero [data-split] .parola > span', { yPercent: 110, duration: 1.1, stagger: .045 }, .25)
     .from('.hero [data-h]', { y: 22, opacity: 0, duration: .9, stagger: .09 }, .45)
-    .fromTo('.hero-foto', { clipPath: 'inset(100% 0% 0% 0% round 999px 999px 28px 28px)' }, { clipPath: 'inset(0% 0% 0% 0% round 999px 999px 28px 28px)', duration: 1.4, ease: 'power4.inOut' }, .2)
+    .fromTo('.hero-foto', { clipPath: `inset(100% 0% 0% 0% round ${R})` }, { clipPath: `inset(0% 0% 0% 0% round ${R})`, duration: 1.4, ease: 'power4.inOut' }, .2)
     .from('.hero-foto img', { scale: 1.3, duration: 1.8 }, .2)
     ;
   const arco = $('.hero-arco path');

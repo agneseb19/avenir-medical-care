@@ -392,12 +392,27 @@ chi = f'''
     </div>
   </div></section>
 
-  <section class="sez" id="dottoressa" style="padding-top:0"><div class="wrap split" style="align-items:start">
+  <section class="sez" id="dottoressa" style="padding-top:0"><div class="wrap dott-grid">
+    <div class="dott-foto" data-par="-6"><img src="assets/img/svegliati-ritratto.jpg" alt="La dottoressa Francesca Svegliati, in camice bianco, alla scrivania dello studio" loading="lazy"></div>
+    <div>
+      <span class="sopra" data-su>La dottoressa</span>
+      <h2 class="h2" data-split>Francesca Svegliati</h2>
+      <p class="lead" data-su style="margin-top:12px">Medico specialista in Diagnostica per Immagini, con una consolidata esperienza in senologia.</p>
+      <p data-su style="margin-top:18px;color:var(--grigio);max-width:56ch">Fino ad agosto 2026 ha guidato la Diagnostica per Immagini in Senologia e la Breast Unit del San Camillo Forlanini, lavorando ogni giorno insieme a chirurghi, oncologi e radioterapisti. Ha organizzato i percorsi diagnostico-terapeutici della Breast Unit e porta avanti l’attività di divulgazione con seminari e conferenze sulla prevenzione.</p>
+      <ul class="cred">
+        <li data-su><svg><use href="#i-check"/></svg><span><b>Formazione</b> · Laurea in Medicina alla Sapienza di Roma, specializzazione in Radiologia</span></li>
+        <li data-su><svg><use href="#i-check"/></svg><span><b>San Camillo Forlanini</b> · Primario di Diagnostica per Immagini in Senologia e Responsabile della Breast Unit</span></li>
+        <li data-su><svg><use href="#i-check"/></svg><span><b>Villa Benedetta</b> · Direzione scientifica del Centro di Senologia</span></li>
+      </ul>
+      <div data-su style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px">{btn('Prenota con la dottoressa', 'contatti.html#prenota')}<a class="btn btn-vuoto" href="https://www.francescasvegliati.it" target="_blank" rel="noopener">Il suo sito personale</a></div>
+    </div>
+  </div></section>
+
+  <section class="sez" id="ad-avenir" style="padding-top:0"><div class="wrap split" style="align-items:start">
     <div>
       <span class="sopra" data-su>Con la dottoressa</span>
       <h2 class="h2" data-split>Cosa fa per te ad Avenir</h2>
       <p class="lead" data-su>Ad Avenir la dottoressa Svegliati segue la senologia: tre esami, che si possono fare anche nella stessa mattina.</p>
-      <div data-su style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">{btn('Prenota con la dottoressa', 'contatti.html#prenota')}<a class="btn btn-vuoto" href="https://www.francescasvegliati.it" target="_blank" rel="noopener">Il suo sito personale</a></div>
     </div>
     <div class="righe">
       {riga('cuore', 'Visita senologica', 'Colloquio, esame clinico e lettura dei tuoi esami', 'visita-senologica.html')}

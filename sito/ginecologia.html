@@ -63,13 +63,24 @@
 </header>
 
 <div class="menu-mob" id="menu-mob">
-  <nav aria-label="Menu">
-    <a href="index.html">Home <svg width="22" height="22"><use href="#i-freccia"/></svg></a>
-    <a href="servizi.html"><span>Servizi<small>Senologia, ginecologia, radiologia</small></span><svg width="22" height="22"><use href="#i-freccia"/></svg></a>
-    <a href="chi-siamo.html">Chi siamo <svg width="22" height="22"><use href="#i-freccia"/></svg></a>
-    <a href="contatti.html">Contatti <svg width="22" height="22"><use href="#i-freccia"/></svg></a>
+  <nav aria-label="Menu" class="menu-pagine">
+    <a href="index.html">Home</a>
+    <a href="servizi.html">Servizi</a>
+    <a href="chi-siamo.html">Chi siamo</a>
+    <a href="contatti.html">Contatti</a>
   </nav>
-  <a class="btn" href="tel:+390600000000">Chiama 06 0000 0000<span class="ico"><svg><use href="#i-tel"/></svg></span></a>
+  <p class="menu-titolo">Esami e visite</p>
+  <div class="menu-servizi">
+    <a href="visita-senologica.html"><svg><use href="#i-cuore"/></svg>Visita senologica</a>
+    <a href="mammografia-3d.html"><svg><use href="#i-strati"/></svg>Mammografia 3D</a>
+    <a href="ecografia-mammaria.html"><svg><use href="#i-scudo"/></svg>Ecografia mammaria</a>
+    <a href="ginecologia.html"><svg><use href="#i-scintilla"/></svg>Ginecologia</a>
+    <a href="radiologia.html"><svg><use href="#i-doc"/></svg>Radiologia</a>
+  </div>
+  <div class="menu-azioni">
+    <a class="btn" href="tel:+390600000000"><svg><use href="#i-tel"/></svg>Chiama</a>
+    <a class="btn btn-vuoto" href="#"><svg><use href="#i-msg"/></svg>WhatsApp</a>
+  </div>
 </div>
 
 <main id="contenuto">
@@ -151,6 +162,12 @@
     <p class="crediti">Foto: Maria Lupan, Nolan Manning, Jonathan Borba, gaspar zaldo, Annie Spratt, Anastasia Krachkovskaya, Alexandr Podvalny (Unsplash). Il mammografo è dello studio.</p>
   </div>
 </footer>
+
+<nav class="barra-azioni" aria-label="Azioni rapide">
+  <a href="tel:+390600000000"><svg><use href="#i-tel"/></svg><span>Chiama</span></a>
+  <a href="#"><svg><use href="#i-msg"/></svg><span>WhatsApp</span></a>
+  <a class="prenota" href="contatti.html#prenota"><svg><use href="#i-cal"/></svg><span>Prenota</span></a>
+</nav>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

@@ -27,6 +27,7 @@
     burger.setAttribute('aria-expanded', v);
     burger.setAttribute('aria-label', v ? 'Chiudi il menu' : 'Apri il menu');
     document.documentElement.style.overflow = v ? 'hidden' : '';
+    const ba = $('.barra-azioni'); if (ba) ba.classList.toggle('via', v);
     if (v && window.gsap && !riduci) gsap.from($$('nav a', menu), { y: 40, opacity: 0, stagger: .06, duration: .7, ease: 'expo.out', delay: .2 });
   });
 
@@ -47,6 +48,36 @@
     }));
     range.addEventListener('input', aggiorna);
   });
+
+  /* ---------- telefono: linguette di sezione nelle sottopagine ---------- */
+  if (matchMedia('(max-width: 760px)').matches && $('.hero-pag')) {
+    const sezioni = $$('main > section').filter(s => !s.matches('.hero, .cta, .correlati') && $('h2', s));
+    if (sezioni.length > 1) {
+      const nav = document.createElement('nav');
+      nav.className = 'linguette'; nav.setAttribute('aria-label', 'Sezioni della pagina');
+      sezioni.forEach((s, i) => {
+        if (!s.id) s.id = 'sezione-' + (i + 1);
+        const sopra = $('.sopra', s);
+        const testo = (sopra ? sopra.textContent : $('h2', s).textContent).trim();
+        const a = document.createElement('a');
+        a.href = '#' + s.id; a.textContent = testo;
+        a.addEventListener('click', e => { e.preventDefault(); scrollTo({ top: s.getBoundingClientRect().top + scrollY - 140, behavior: 'smooth' }); });
+        nav.appendChild(a);
+      });
+      $('.hero').after(nav);
+      const links = $$('a', nav);
+      const segna = () => {
+        let att = -1;
+        sezioni.forEach((s, i) => { if (s.getBoundingClientRect().top < 200) att = i; });
+        links.forEach((l, i) => l.classList.toggle('attiva', i === att));
+        const on = links[att];
+        if (on) nav.scrollTo({ left: on.offsetLeft - 20, behavior: 'smooth' });
+      };
+      let coda2 = false;
+      addEventListener('scroll', () => { if (!coda2) { coda2 = true; requestAnimationFrame(() => { coda2 = false; segna(); }); } }, { passive: true });
+      segna();
+    }
+  }
 
   /* ---------- storia della tomosintesi (pagina mammografia) ---------- */
   const storia = $('[data-storia]');

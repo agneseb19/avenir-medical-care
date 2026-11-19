@@ -638,3 +638,74 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
 .inc-piu { align-self: center; flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--rosa); color: #fff; display: grid; place-items: center; font-size: 20px; font-weight: 500; line-height: 1; }
 .intro-dati { margin-top: 20px; }
 @media (max-width: 760px) { .incontro { flex-direction: column; gap: 8px; } .inc-piu { width: 30px; height: 30px; font-size: 18px; } .inc-voce { justify-content: flex-start; } .inc-voce b { font-size: 16px; } .inc-voce small { font-size: 14.5px; } }
+
+/* ================= TELEFONO COME UN'APP ================= */
+.solo-mob, .barra-azioni { display: none; }
+
+/* menu (visibile da tablet in giù) */
+.menu-mob { padding: 96px var(--pad) calc(24px + env(safe-area-inset-bottom)); overflow-y: auto; }
+.menu-mob .menu-pagine a { font-size: 30px; padding: 8px 0; border: 0; display: block; }
+.menu-titolo { font-size: 14px; font-weight: 600; color: var(--grigio); margin: 22px 0 10px; }
+.menu-servizi { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.menu-servizi a { display: flex; align-items: center; gap: 10px; padding: 14px; border-radius: 16px; background: #fff; border: 1px solid var(--bordo); font-size: 15px; font-weight: 600; line-height: 1.2; }
+.menu-servizi svg { width: 20px; height: 20px; color: var(--rosa); flex: none; }
+.menu-azioni { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: auto; padding-top: 22px; }
+.menu-mob .menu-azioni .btn { width: 100%; justify-content: center; padding: 0 16px; margin: 0; gap: 8px; }
+.menu-azioni svg { width: 18px; height: 18px; }
+
+@media (max-width: 760px) {
+  .solo-mob { display: block; }
+  body { padding-bottom: 92px; }
+
+  /* barra azioni fissa in basso */
+  .barra-azioni { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 6px; position: fixed; left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom)); z-index: 95; padding: 6px; background: rgba(255,255,255,.94); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--bordo); border-radius: 22px; box-shadow: 0 14px 40px -12px rgba(20,36,58,.4); transition: transform .45s var(--ease); }
+  .barra-azioni.via { transform: translateY(150%); }
+  .barra-azioni a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; height: 56px; border-radius: 16px; font-size: 12.5px; font-weight: 600; color: var(--blu); transition: background-color .2s, transform .15s; }
+  .barra-azioni a:active { transform: scale(.95); background: var(--cipria); }
+  .barra-azioni svg { width: 21px; height: 21px; }
+  .barra-azioni .prenota { background: var(--blu); color: #fff; flex-direction: row; gap: 8px; font-size: 16px; }
+  .barra-azioni .prenota:active { background: var(--notte); }
+
+  /* Home: riquadri di accesso rapido al posto del carosello dei servizi */
+  .oriz { display: none; }
+  .rapidi { padding: 30px 0 6px; }
+  .rapidi-titolo { font-size: 24px; letter-spacing: -.03em; margin-bottom: 14px; }
+  .rapidi-griglia { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .rapidi-griglia a { display: flex; flex-direction: column; justify-content: space-between; gap: 14px; padding: 16px; min-height: 116px; background: #fff; border: 1px solid var(--bordo); border-radius: 20px; font-weight: 600; font-size: 16px; letter-spacing: -.01em; line-height: 1.25; transition: transform .15s; }
+  .rapidi-griglia a:active { transform: scale(.97); }
+  .rapidi-griglia span { width: 42px; height: 42px; border-radius: 13px; background: var(--cipria); color: var(--rosa); display: grid; place-items: center; }
+  .rapidi-griglia svg { width: 21px; height: 21px; }
+  .rapidi-griglia .evid { background: var(--blu); color: #fff; border-color: transparent; }
+  .rapidi-griglia .evid span { background: rgba(255,255,255,.14); color: #fff; }
+
+  /* passaggi: elenco numerato verticale, si legge tutto senza scorrere di lato */
+  .fasi, .passi { display: grid !important; overflow: visible; margin-inline: 0; padding: 0; gap: 0; }
+  .fasi > *, .passi > .passo { flex: none; }
+  .fase { display: grid; grid-template-columns: 38px 1fr; column-gap: 14px; padding: 16px 0; border: 0; border-bottom: 1px solid var(--bordo); border-radius: 0; background: none; }
+  .fase::before { grid-row: span 2; font-size: 14px; width: 36px; height: 36px; border-radius: 50%; background: var(--cipria); color: var(--blu); display: grid; place-items: center; font-weight: 600; letter-spacing: 0; }
+  .fase h3 { margin-top: 4px; font-size: 18px; }
+  .fase p { margin-top: 4px; }
+  .passo { display: grid; grid-template-columns: 46px 1fr; column-gap: 14px; padding: 16px 0; border: 0; border-bottom: 1px solid var(--bordo); border-radius: 0; background: none; }
+  .passo:hover { transform: none; box-shadow: none; }
+  .passo-ico { width: 44px; height: 44px; border-radius: 14px; grid-row: span 2; }
+  .passo h3 { margin-top: 2px; font-size: 18px; }
+  .passo p { margin-top: 4px; }
+
+  /* dati brevi: griglia 2x2 a colpo d'occhio */
+  .dati4, .valori, .intro-dati { display: grid !important; grid-template-columns: 1fr 1fr; overflow: visible; margin-inline: 0; padding: 0; gap: 10px; }
+  .dati4 > *, .valori > *, .intro-dati > * { flex: none; }
+  .intro-dati > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .dato { padding: 16px; }
+  .dato svg { width: 22px; height: 22px; }
+  .dato b { font-size: 15.5px; margin-top: 10px; }
+  .dato small { font-size: 14.5px; }
+
+  /* linguette di sezione nelle sottopagine */
+  .linguette { position: sticky; top: 80px; z-index: 80; display: flex; gap: 8px; overflow-x: auto; padding: 10px var(--pad); background: rgba(252,250,250,.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); scrollbar-width: none; margin-top: 8px; }
+  .linguette::-webkit-scrollbar { display: none; }
+  .linguette a { flex: none; padding: 9px 16px; border-radius: 999px; background: #fff; border: 1px solid var(--bordo); font-size: 14.5px; font-weight: 600; color: var(--blu); white-space: nowrap; transition: background-color .25s, color .25s, border-color .25s; }
+  .linguette a.attiva { background: var(--blu); color: #fff; border-color: transparent; }
+}
+
+.cred li b { font-weight: 600; color: var(--testo); }
+.cred li span { color: var(--grigio); }

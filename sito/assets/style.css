@@ -606,3 +606,13 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
   .hero:not(.senza-media) .btn-vuoto::before { background: rgba(255,255,255,.14); }
   .hero:not(.senza-media) .etichetta { background: rgba(255,255,255,.16); color: #fff; border-color: rgba(255,255,255,.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 }
+
+/* logo Praemedica */
+.partner { display: inline-flex; align-items: center; gap: 16px; margin-top: 30px; padding: 14px 20px; background: #fff; border: 1px solid var(--bordo); border-radius: 18px; transition: transform .45s var(--ease), box-shadow .45s; }
+.partner:hover { transform: translateY(-3px); box-shadow: var(--ombra); }
+.partner span { font-size: 13.5px; color: var(--grigio); white-space: nowrap; }
+.partner img { height: 34px; width: auto; }
+.partner-piede { margin-top: 20px; padding: 0; border: 0; background: none; flex-direction: column; align-items: flex-start; gap: 8px; }
+.partner-piede:hover { transform: none; box-shadow: none; opacity: .8; }
+.partner-piede img { height: 30px; }
+@media (max-width: 760px) { .partner { flex-direction: column; align-items: flex-start; gap: 8px; } .partner img { height: 30px; } }

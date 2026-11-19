@@ -408,7 +408,7 @@ chi = f'''
 
   <section class="scuro"><div class="wrap split">
     <div>
-      <span class="sopra" data-su>Praemedica</span>
+      <a href="https://praemedica.it" target="_blank" rel="noopener" data-su style="display:inline-block;margin-bottom:22px"><img src="assets/img/praemedica-logo-bianco.png" alt="Praemedica" width="617" height="124" style="height:44px;width:auto"></a>
       <h2 class="h2" data-split>Il partner organizzativo</h2>
       <p class="lead" data-su>Praemedica è un centro diagnostico polispecialistico nato nel 2025, con oltre venti specialità e una diagnostica per immagini completa. Porta ad Avenir la sua organizzazione: prenotazioni, accoglienza e tempi di attesa brevi.</p>
       <div class="righe">

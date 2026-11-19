@@ -709,3 +709,14 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
 
 .cred li b { font-weight: 600; color: var(--testo); }
 .cred li span { color: var(--grigio); }
+
+/* telefono: Praemedica e dottoressa affiancati */
+@media (max-width: 760px) {
+  .incontro { flex-direction: row !important; align-items: stretch; gap: 6px; margin-top: 24px; }
+  .inc-voce { flex: 1 1 0; min-width: 0; min-height: 0; padding: 14px 10px; border-radius: 18px; flex-direction: column; justify-content: center !important; align-items: center; text-align: center; gap: 8px; }
+  .inc-logo { height: auto; width: 100%; max-width: 132px; }
+  .inc-foto { width: 44px; height: 44px; }
+  .inc-voce b { font-size: 14px !important; line-height: 1.2; }
+  .inc-voce small { font-size: 13px !important; }
+  .inc-piu { width: 26px !important; height: 26px !important; font-size: 16px !important; }
+}

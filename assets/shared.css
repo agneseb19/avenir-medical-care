@@ -1,0 +1,180 @@
+/* Avenir Medical Care — base condivisa dalle demo */
+:root {
+  --blu: #1f3a5f;          /* blu del logo: testo e titoli */
+  --blu-scuro: #152a46;
+  --rosa: #c4877c;         /* curva del logo: solo grafica, mai testo piccolo */
+  --rosa-testo: #9a564c;   /* rosa scurito: AA su bianco */
+  --rosa-velo: #f5e8e4;    /* superficie calda */
+  --carta: #fbfcfd;        /* sfondo */
+  --nebbia: #edf1f5;       /* superficie fredda */
+  --grigio: #4a5a6e;       /* testo secondario: AA su carta */
+  --linea: #d6dde5;
+
+  --f-titolo: "Urbanist", system-ui, sans-serif;
+  --f-testo: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, sans-serif;
+
+  /* scala 1.25 su base 19px */
+  --t-s: 1rem;
+  --t-m: 1.1875rem;
+  --t-l: 1.5rem;
+  --t-xl: clamp(1.75rem, 1.2rem + 1.8vw, 2.4rem);
+  --t-xxl: clamp(2.4rem, 1.4rem + 3.6vw, 4.1rem);
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --max: 1200px;
+  --r-s: 6px;
+  --r-m: 14px;
+  --ease: cubic-bezier(.22, .61, .36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 96px; }
+body {
+  margin: 0;
+  background: var(--carta);
+  color: var(--blu);
+  font-family: var(--f-testo);
+  font-size: var(--t-m);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--f-titolo); font-weight: 500; line-height: 1.12; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
+h1 { font-size: var(--t-xxl); font-weight: 400; }
+h2 { font-size: var(--t-xl); }
+h3 { font-size: var(--t-l); font-weight: 600; letter-spacing: -0.005em; }
+p { margin: 0; max-width: 62ch; text-wrap: pretty; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.muted { color: var(--grigio); }
+
+:focus-visible { outline: 3px solid var(--rosa-testo); outline-offset: 3px; border-radius: 4px; }
+
+.skip { position: absolute; left: -999px; top: 8px; background: var(--blu); color: #fff; padding: 12px 18px; z-index: 100; border-radius: var(--r-s); }
+.skip:focus { left: 8px; }
+
+/* ---------- Logo ---------- */
+.logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--blu); }
+.logo svg { width: 34px; height: 30px; flex: none; }
+.logo-testo { display: flex; flex-direction: column; line-height: 1; }
+.logo-nome { font-family: var(--f-titolo); font-weight: 400; font-size: 1.3rem; letter-spacing: .32em; }
+.logo-sub { font-family: var(--f-titolo); font-weight: 500; font-size: .62rem; letter-spacing: .38em; color: var(--rosa-testo); margin-top: 6px; }
+
+/* ---------- Bottoni ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 54px; padding: 0 26px;
+  font: 600 1.05rem/1 var(--f-testo);
+  border-radius: 999px; text-decoration: none; cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
+}
+.btn-pieno { background: var(--blu); color: #fff; }
+.btn-pieno:hover { background: var(--blu-scuro); }
+.btn-vuoto { border-color: var(--blu); color: var(--blu); background: transparent; }
+.btn-vuoto:hover { background: var(--nebbia); }
+.btn svg { width: 20px; height: 20px; }
+
+/* ---------- Header ---------- */
+.header { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--carta) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color .2s; }
+.header.scrolled { border-bottom-color: var(--linea); }
+.header-in { display: flex; align-items: center; gap: 32px; min-height: 84px; }
+.nav { display: flex; gap: 6px; margin-left: auto; }
+.nav a, .nav button.nav-voce {
+  font: 500 1.05rem/1 var(--f-testo); color: var(--blu); text-decoration: none;
+  padding: 14px 14px; border-radius: var(--r-s); background: none; border: 0; cursor: pointer;
+}
+.nav a:hover, .nav button.nav-voce:hover { background: var(--nebbia); }
+.nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--rosa); text-decoration-thickness: 2px; text-underline-offset: 8px; }
+.header-azioni { display: flex; align-items: center; gap: 14px; }
+.tel { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.tel svg { width: 20px; height: 20px; color: var(--rosa-testo); }
+.menu-btn { display: none; }
+
+@media (max-width: 1020px) {
+  .nav { display: none; }
+  .header-azioni .tel { width: 54px; height: 54px; justify-content: center; border-radius: 999px; background: var(--rosa-velo); }
+  .header-azioni .tel span { display: none; }
+  .header-azioni .tel svg { width: 24px; height: 24px; }
+  .header-azioni { margin-left: auto; }
+  .menu-btn { display: inline-flex; min-height: 54px; padding: 0 18px; border-radius: 999px; border: 2px solid var(--blu); background: none; font: 600 1.05rem/1 var(--f-testo); color: var(--blu); cursor: pointer; align-items: center; gap: 8px; }
+}
+@media (max-width: 520px) {
+  .header-azioni .btn-pieno { display: none; }
+  .logo-nome { font-size: 1.1rem; }
+}
+
+/* Menu mobile: voci grandi, telefono in evidenza */
+.menu-mobile { position: fixed; inset: 0; z-index: 60; background: var(--carta); padding: 20px var(--gutter) 32px; display: flex; flex-direction: column; gap: 8px; overflow-y: auto; }
+.menu-mobile[hidden] { display: none; }
+.menu-mobile .menu-top { display: flex; justify-content: space-between; align-items: center; min-height: 64px; margin-bottom: 16px; }
+.menu-mobile nav a { display: block; font: 500 1.6rem/1.2 var(--f-titolo); padding: 16px 0; border-bottom: 1px solid var(--linea); text-decoration: none; }
+.menu-mobile .menu-sub { font-family: var(--f-testo); font-size: 1rem; color: var(--grigio); display: block; margin-top: 4px; }
+.menu-mobile .btn { width: 100%; margin-top: 12px; }
+
+/* ---------- Sezioni comuni ---------- */
+.sez { padding: clamp(72px, 9vw, 128px) 0; }
+.sez-titolo { display: grid; gap: 16px; margin-bottom: clamp(36px, 5vw, 56px); max-width: 720px; }
+
+/* Servizi: elenco a righe, non card */
+.branche { display: grid; gap: 0; border-top: 1px solid var(--linea); }
+.branca { display: grid; grid-template-columns: minmax(200px, 4fr) 8fr; gap: 24px 48px; padding: 36px 0; border-bottom: 1px solid var(--linea); }
+.branca-nome { display: grid; gap: 8px; align-content: start; }
+.branca-nome .stato { font-size: var(--t-s); color: var(--grigio); }
+.prestazioni { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.prestazioni a, .prestazioni span.voce {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 14px 16px; margin: 0 -16px; border-radius: var(--r-s); text-decoration: none; font-size: 1.15rem;
+}
+.prestazioni a:hover { background: var(--nebbia); }
+.prestazioni a .vai { color: var(--rosa-testo); font-size: var(--t-s); font-weight: 700; white-space: nowrap; }
+.prestazioni .nota { font-size: var(--t-s); color: var(--grigio); }
+.tag3d { font: 700 .8rem/1 var(--f-testo); background: var(--rosa-velo); color: var(--rosa-testo); padding: 5px 9px; border-radius: 999px; margin-left: 10px; vertical-align: 2px; }
+@media (max-width: 760px) { .branca { grid-template-columns: 1fr; } }
+
+/* Dottoressa */
+.dott { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(32px, 6vw, 88px); align-items: start; }
+.ritratto { aspect-ratio: 4/5; background: linear-gradient(180deg, var(--rosa-velo), #ecd6d0); border-radius: var(--r-m); display: grid; place-items: end start; padding: 20px; color: var(--rosa-testo); font-size: var(--t-s); position: relative; overflow: hidden; }
+.ritratto svg { position: absolute; inset: 18% 14% auto; width: 72%; opacity: .5; }
+.dott-testo { display: grid; gap: 22px; }
+.dott-ruolo { font-family: var(--f-titolo); font-size: var(--t-l); line-height: 1.3; color: var(--grigio); max-width: 34ch; }
+.fatti { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 0; border-top: 1px solid var(--linea); }
+.fatti li { padding: 16px 0; border-bottom: 1px solid var(--linea); display: grid; grid-template-columns: 160px 1fr; gap: 16px; }
+.fatti b { font-weight: 700; color: var(--grigio); font-size: var(--t-s); padding-top: 3px; }
+@media (max-width: 860px) { .dott { grid-template-columns: 1fr; } .ritratto { max-width: 420px; aspect-ratio: 1; } .fatti li { grid-template-columns: 1fr; gap: 2px; } }
+
+/* Prenotare: sequenza reale */
+.passi { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; counter-reset: p; }
+.passi li { counter-increment: p; display: grid; gap: 10px; align-content: start; }
+.passi li::before { content: counter(p); font: 400 2.6rem/1 var(--f-titolo); color: var(--rosa); }
+@media (max-width: 760px) { .passi { grid-template-columns: 1fr; gap: 28px; } }
+
+/* Contatti */
+.contatti { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); }
+.contatti dl { margin: 0; display: grid; gap: 22px; }
+.contatti dt { font-size: var(--t-s); color: var(--grigio); font-weight: 700; }
+.contatti dd { margin: 4px 0 0; font-size: 1.25rem; }
+.contatti dd a { font-weight: 700; }
+.orari { width: 100%; border-collapse: collapse; font-size: 1.1rem; }
+.orari td { padding: 12px 0; border-bottom: 1px solid var(--linea); }
+.orari td:last-child { text-align: right; }
+.mappa { margin-top: 28px; aspect-ratio: 16/9; border-radius: var(--r-m); background: var(--nebbia) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 20h40M20 0v40' stroke='%23d6dde5' stroke-width='1'/%3E%3C/svg%3E"); display: grid; place-items: center; color: var(--grigio); font-size: var(--t-s); }
+@media (max-width: 860px) { .contatti { grid-template-columns: 1fr; } }
+
+.placeholder { background: #fff6d6; border-radius: 3px; padding: 0 4px; }
+
+/* Footer */
+.footer { background: var(--blu); color: #dfe6ee; padding: 56px 0 40px; font-size: var(--t-s); }
+.footer-in { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; }
+.footer .logo { color: #fff; }
+.footer .logo-sub { color: #e6b8b0; }
+.footer a { color: #fff; }
+
+/* Barra demo: non fa parte del sito */
+.demo-bar { background: #2b2f36; color: #e9ecf1; font: 500 14px/1.4 system-ui, sans-serif; padding: 10px var(--gutter); display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; }
+.demo-bar a { color: #fff; }
+.demo-bar strong { color: #f0c9c1; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

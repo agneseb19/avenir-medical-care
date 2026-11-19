@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avenir Medical Care, Demo A · Essenziale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Urbanist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/shared.css">
+
+</head>
+<body>
+<div class="demo-bar" role="note"><strong>Demo A · Essenziale</strong><span>Movimento leggero. Servizi in home, navigazione ridotta a Chi siamo e Contatti.</span><a href="index.html">Tutte le demo</a></div><a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="header"><div class="wrap header-in">
+  <a class="logo" href="demo-a.html" aria-label="Avenir Medical Care, pagina iniziale"><svg viewBox="0 0 40 36" aria-hidden="true"><path d="M3 34 L20 2.6 L37 34" fill="none" stroke="currentColor" stroke-width="4.2"/><path d="M5.2 30.6 C10 20 23 16.5 31.3 23.6" fill="none" stroke="#c4877c" stroke-width="2.6" stroke-linecap="round"/></svg><span class="logo-testo"><span class="logo-nome">AVENIR</span><span class="logo-sub">MEDICAL CARE</span></span></a>
+  <nav class="nav" aria-label="Principale"><a href="#chi-siamo">Chi siamo</a><a href="#contatti">Contatti</a></nav>
+  <div class="header-azioni">
+    <a class="tel" href="tel:+390600000000" aria-label="Chiama 06 0000 0000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> <span>06 0000 0000</span></a>
+    <a class="btn btn-pieno" href="#prenota">Prenota</a>
+    <button class="menu-btn" data-menu-apri aria-expanded="false" aria-controls="menu-mobile">Menu</button>
+  </div>
+</div></header>
+<div class="menu-mobile" hidden id="menu-mobile" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-top"><a class="logo" href="demo-a.html" aria-label="Avenir Medical Care, pagina iniziale"><svg viewBox="0 0 40 36" aria-hidden="true"><path d="M3 34 L20 2.6 L37 34" fill="none" stroke="currentColor" stroke-width="4.2"/><path d="M5.2 30.6 C10 20 23 16.5 31.3 23.6" fill="none" stroke="#c4877c" stroke-width="2.6" stroke-linecap="round"/></svg><span class="logo-testo"><span class="logo-nome">AVENIR</span><span class="logo-sub">MEDICAL CARE</span></span></a><button class="menu-btn" data-menu-chiudi>Chiudi</button></div>
+  <nav><a href="#servizi">Servizi<span class="menu-sub">Senologia, ginecologia, radiologia</span></a><a href="#chi-siamo">Chi siamo</a><a href="#contatti">Contatti</a></nav>
+  <a class="btn btn-pieno" href="tel:+390600000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> Chiama 06 0000 0000</a>
+  <a class="btn btn-vuoto" href="#prenota">Come prenotare</a>
+</div><main id="contenuto"><style>
+.hero-a { padding: clamp(40px, 6vw, 88px) 0 clamp(64px, 8vw, 112px); }
+.hero-a .wrap { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
+.hero-a h1 { max-width: 14ch; }
+.hero-a .lead { font-size: 1.3rem; margin-top: 28px; max-width: 40ch; color: var(--grigio); }
+.hero-a .azioni { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+.hero-a .credenziale { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--linea); font-size: 1rem; color: var(--grigio); max-width: 52ch; }
+.arcata { position: relative; padding-top: 28px; }
+.arcata .foto { border-radius: 999px 999px var(--r-m) var(--r-m); overflow: hidden; aspect-ratio: 4/5; background: var(--nebbia); }
+.arcata .foto img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 40%; }
+.arcata svg { position: absolute; left: -5%; top: 28px; width: 110%; height: auto; overflow: visible; pointer-events: none; transform: translateY(-8.333%); }
+.arcata svg path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: traccia 1.8s .3s var(--ease) forwards; }
+@keyframes traccia { to { stroke-dashoffset: 0; } }
+@media (max-width: 860px) { .hero-a .wrap { grid-template-columns: 1fr; } .arcata { max-width: 380px; } }
+</style>
+<section class="hero-a"><div class="wrap">
+  <div>
+    <h1>Senologia a Roma con la dottoressa Francesca Svegliati</h1>
+    <p class="lead">Visita senologica, ecografia mammaria e mammografia 3D con tomosintesi, nello stesso studio. Insieme a ginecologia e radiologia.</p>
+    <div class="azioni">
+      <a class="btn btn-pieno" href="#prenota">Prenota una visita</a>
+      <a class="btn btn-vuoto" href="tel:+390600000000">Chiama 06 0000 0000</a>
+    </div>
+    <p class="credenziale">Fino ad agosto 2026 Primario di Diagnostica per Immagini in Senologia e Responsabile della Breast Unit del San Camillo Forlanini.</p>
+  </div>
+  <figure class="arcata" style="margin:0">
+    <div class="foto"><img src="assets/mammografo.jpg" alt="Il mammografo con tomosintesi dello studio" width="819" height="1024"></div>
+    <svg viewBox="0 0 110 60" aria-hidden="true"><path pathLength="1" d="M6.1 37.2 A52 52 0 0 1 103.9 37.2" fill="none" stroke="#c4877c" stroke-width="1" stroke-linecap="round"/></svg>
+  </figure>
+</div></section>
+<style>
+.tomo { background: var(--blu); color: #fff; }
+.tomo .wrap { display: grid; grid-template-columns: 6fr 6fr; gap: clamp(40px, 6vw, 96px); align-items: center; }
+.tomo h2 { color: #fff; }
+.tomo .intro { margin-top: 20px; font-size: 1.25rem; color: #d9e2ec; max-width: 46ch; }
+.tomo dl { margin: 40px 0 0; display: grid; gap: 24px; }
+.tomo dt { font-family: var(--f-titolo); font-weight: 600; font-size: 1.2rem; color: #f0c9c1; }
+.tomo dd { margin: 6px 0 0; color: #d9e2ec; max-width: 50ch; }
+.tomo .btn-chiaro { background: #fff; color: var(--blu); margin-top: 40px; }
+.tomo .btn-chiaro:hover { background: var(--rosa-velo); }
+.confronto { background: var(--carta); color: var(--blu); border-radius: var(--r-m); padding: clamp(18px, 3vw, 28px); }
+.schede { display: grid; grid-template-columns: 1fr 1fr; background: var(--nebbia); border-radius: 999px; padding: 5px; }
+.schede button { min-height: 50px; border: 0; border-radius: 999px; background: none; font: 600 1.05rem/1 var(--f-testo); color: var(--blu); cursor: pointer; transition: background-color .25s var(--ease), color .25s var(--ease); }
+.schede button[aria-selected="true"] { background: var(--blu); color: #fff; }
+.confronto svg { width: 100%; height: auto; display: block; margin: 12px 0 4px; }
+.confronto .st-layer, .confronto .st-reperto { transition: opacity .35s var(--ease); }
+.cursore { display: grid; gap: 10px; min-height: 92px; align-content: start; }
+.cursore label { display: flex; justify-content: space-between; font-weight: 700; }
+.cursore input[type=range] { width: 100%; accent-color: var(--blu); height: 36px; }
+.cursore[hidden] { display: none; }
+.didascalia { font-size: .95rem; color: var(--grigio); min-height: 92px; }
+.schema-nota { font-size: .85rem; color: var(--grigio); margin-top: 6px; }
+@media (max-width: 900px) { .tomo .wrap { grid-template-columns: 1fr; } }
+</style>
+<section class="sez tomo" aria-labelledby="t-tomo"><div class="wrap">
+  <div>
+    <h2 id="t-tomo">Mammografia 3D con tomosintesi</h2>
+    <p class="intro">In una mammografia tradizionale i tessuti del seno si sovrappongono in un'unica immagine. La tomosintesi li separa in strati sottili, che il medico sfoglia uno alla volta, come le pagine di un libro.</p>
+    <dl>
+      <div><dt>Come si svolge</dt><dd>Come una normale mammografia: stessa posizione, stessa compressione. Il tubo radiogeno si muove lungo un breve arco e acquisisce più immagini da angolazioni diverse.</dd></div>
+      <div><dt>Quando è utile</dt><dd>In particolare con il seno denso, dove i tessuti sovrapposti rendono più difficile la lettura dell'immagine.</dd></div>
+    </dl>
+    <a class="btn btn-chiaro" href="servizio-mammografia-3d.html">Leggi come prepararti all'esame</a>
+  </div>
+  <div class="confronto" data-confronto>
+    <div class="schede" role="tablist" aria-label="Tipo di immagine">
+      <button role="tab" aria-selected="true" data-modo="2d">Immagine 2D</button>
+      <button role="tab" aria-selected="false" data-modo="3d">Strati 3D</button>
+    </div>
+    <svg role="img" aria-label="Schema: in 2D gli strati di tessuto si sovrappongono e nascondono un piccolo reperto; separando gli strati il reperto diventa visibile."></svg>
+    <p class="didascalia" data-did-2d>Tutti gli strati in un'unica immagine: il punto rosa è coperto dai tessuti che gli stanno sopra e sotto.</p>
+    <div class="cursore" data-cursore hidden>
+      <label for="strato"><span>Sfoglia gli strati</span><output data-out>Strato 1 di 9</output></label>
+      <input id="strato" type="range" min="1" max="9" step="1" value="1">
+    </div>
+    <p class="schema-nota">Schema illustrativo, non un'immagine clinica.</p>
+  </div>
+</div></section>
+<section class="sez" id="servizi" aria-labelledby="t-servizi"><div class="wrap">
+  <div class="sez-titolo"><h2 id="t-servizi">Servizi</h2><p class="muted">Tre branche, con la senologia al centro. Ogni esame ha una pagina con come si svolge, come prepararsi e cosa portare.</p></div>
+  <div class="branche">
+    <div class="branca">
+      <div class="branca-nome"><h3>Senologia</h3><span class="stato">Con la dott.ssa Francesca Svegliati</span></div>
+      <ul class="prestazioni">
+        <li><a href="servizio-mammografia-3d.html"><span>Visita senologica</span><span class="vai">Dettagli</span></a></li>
+        <li><a href="servizio-mammografia-3d.html"><span>Ecografia mammaria</span><span class="vai">Dettagli</span></a></li>
+        <li><a href="servizio-mammografia-3d.html"><span>Mammografia 3D con tomosintesi <span class="tag3d">Nuova tecnologia</span></span><span class="vai">Dettagli</span></a></li>
+      </ul>
+    </div>
+    <div class="branca" id="ginecologia">
+      <div class="branca-nome"><h3>Ginecologia</h3><span class="stato">Elenco in definizione</span></div>
+      <ul class="prestazioni">
+        <li><span class="voce">Visita ginecologica</span></li>
+        <li><span class="voce">Visita di controllo</span></li>
+        <li><span class="voce">Pap test</span></li>
+        <li><span class="voce">HPV test</span></li>
+        <li><span class="voce">Ecografia pelvica</span></li>
+      </ul>
+    </div>
+    <div class="branca" id="radiologia">
+      <div class="branca-nome"><h3>Radiologia</h3><span class="stato">In arrivo</span></div>
+      <ul class="prestazioni"><li><span class="voce nota">L'elenco degli esami sarà pubblicato prima dell'apertura.</span></li></ul>
+    </div>
+  </div>
+</div></section><section class="sez" id="chi-siamo" aria-labelledby="t-dott" style="background:var(--nebbia)"><div class="wrap">
+  <p class="muted" style="margin-bottom:40px;font-size:1.25rem;max-width:44ch">Avenir Medical Care è un nuovo poliambulatorio a Roma, nato dalla collaborazione tra Praemedica e la dottoressa Francesca Svegliati.</p>
+  <div class="dott">
+    <div class="ritratto" role="img" aria-label="Spazio per la foto della dottoressa">
+      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M5.2 30.6 C10 20 23 16.5 31.3 23.6" fill="none" stroke="#c4877c" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <span>Foto della dottoressa</span>
+    </div>
+    <div class="dott-testo">
+      <h2 id="t-dott">Dott.ssa Francesca Svegliati</h2>
+      <p class="dott-ruolo">Medico specialista in Diagnostica per Immagini, con una consolidata esperienza in senologia.</p>
+      <p>Fino ad agosto 2026 è stata Primario di Diagnostica per Immagini in Senologia e Responsabile della Breast Unit del San Camillo Forlanini, dove ha lavorato insieme a chirurgia oncologica, oncologia medica e radioterapia.</p>
+      <p>Si è occupata dell'organizzazione dei percorsi diagnostico-terapeutici e partecipa a seminari e conferenze di divulgazione scientifica.</p>
+      <ul class="fatti">
+        <li><b>Specializzazione</b><span>Diagnostica per Immagini</span></li>
+        <li><b>Ambito</b><span>Senologia</span></li>
+        <li><b>Ruolo precedente</b><span>Primario e Responsabile Breast Unit, San Camillo Forlanini</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section><section class="sez" id="prenota" aria-labelledby="t-prenota"><div class="wrap">
+  <div class="sez-titolo"><h2 id="t-prenota">Come prenotare</h2></div>
+  <ol class="passi">
+    <li><h3>Chiama o scrivi</h3><p>Al numero <a href="tel:+390600000000"><b>06 0000 0000</b></a> o su WhatsApp. Ti risponde la segreteria, non un risponditore automatico.</p></li>
+    <li><h3>Scegli giorno e orario</h3><p>Ti diciamo la prima data libera e come prepararti all'esame.</p></li>
+    <li><h3>Porta gli esami precedenti</h3><p>Mammografie ed ecografie già fatte, anche su CD, servono per il confronto.</p></li>
+  </ol>
+  <p style="margin-top:48px"><a class="btn btn-pieno" href="tel:+390600000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> Chiama 06 0000 0000</a></p>
+</div></section><section class="sez" id="contatti" aria-labelledby="t-contatti" style="background:var(--rosa-velo)"><div class="wrap">
+  <div class="sez-titolo"><h2 id="t-contatti">Contatti e orari</h2></div>
+  <div class="contatti">
+    <dl>
+      <div><dt>Indirizzo</dt><dd>Viale Giuseppe Mazzini 142<br>00195 Roma <span class="placeholder">da confermare</span></dd></div>
+      <div><dt>Telefono</dt><dd><a href="tel:+390600000000">06 0000 0000</a> <span class="placeholder">segnaposto</span></dd></div>
+      <div><dt>WhatsApp</dt><dd><a href="#">000 000 0000</a> <span class="placeholder">segnaposto</span></dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:info@example.com">info@example.com</a> <span class="placeholder">segnaposto</span></dd></div>
+    </dl>
+    <div>
+      <table class="orari"><caption class="muted" style="text-align:left;font-weight:700;font-size:1rem;padding-bottom:6px">Orari <span class="placeholder">da confermare</span></caption>
+        <tr><td>Lunedì – Venerdì</td><td>9:00 – 19:00</td></tr>
+        <tr><td>Sabato</td><td>9:00 – 13:00</td></tr>
+        <tr><td>Domenica</td><td>Chiuso</td></tr>
+      </table>
+      <div class="mappa">Mappa</div>
+    </div>
+  </div>
+</div></section></main><footer class="footer"><div class="wrap footer-in">
+  <a class="logo" href="demo-a.html" aria-label="Avenir Medical Care, pagina iniziale"><svg viewBox="0 0 40 36" aria-hidden="true"><path d="M3 34 L20 2.6 L37 34" fill="none" stroke="currentColor" stroke-width="4.2"/><path d="M5.2 30.6 C10 20 23 16.5 31.3 23.6" fill="none" stroke="#c4877c" stroke-width="2.6" stroke-linecap="round"/></svg><span class="logo-testo"><span class="logo-nome">AVENIR</span><span class="logo-sub">MEDICAL CARE</span></span></a>
+  <p>Avenir Medical Care, Roma<br>Direttore sanitario: <span class="placeholder" style="color:#333">da inserire</span></p>
+  <p><a href="#">Privacy</a> &nbsp; <a href="#">Cookie</a></p>
+</div></footer>
+<script src="assets/shared.js"></script>
+<script src="assets/strati.js"></script><script src="assets/demo-a.js"></script>
+</body>
+</html>

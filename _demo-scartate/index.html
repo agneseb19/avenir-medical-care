@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avenir, demo del sito</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Urbanist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+.idx { padding: 64px 0 96px; }
+.idx h1 { font-size: var(--t-xl); max-width: 24ch; }
+.idx .intro { margin-top: 18px; color: var(--grigio); }
+.tab { width: 100%; border-collapse: collapse; margin-top: 48px; font-size: 1.05rem; }
+.tab th, .tab td { text-align: left; vertical-align: top; padding: 18px 16px 18px 0; border-bottom: 1px solid var(--linea); }
+.tab thead th { font-family: var(--f-titolo); font-size: 1.4rem; font-weight: 500; }
+.tab tbody th { color: var(--grigio); font-weight: 700; font-size: .95rem; width: 16%; }
+.tab a.btn { margin-top: 4px; min-height: 48px; }
+.consiglio { background: var(--rosa-velo); color: var(--rosa-testo); font-weight: 700; font-size: .85rem; padding: 4px 10px; border-radius: 999px; margin-left: 8px; vertical-align: 3px; }
+.scroll-x { overflow-x: auto; }
+.tab { min-width: 760px; }
+.altro { margin-top: 40px; }
+</style>
+</head>
+<body>
+<main class="wrap idx">
+  <a class="logo" href="index.html"><svg viewBox="0 0 40 36" aria-hidden="true"><path d="M3 34 L20 2.6 L37 34" fill="none" stroke="currentColor" stroke-width="4.2"/><path d="M5.2 30.6 C10 20 23 16.5 31.3 23.6" fill="none" stroke="#c4877c" stroke-width="2.6" stroke-linecap="round"/></svg><span class="logo-testo"><span class="logo-nome">AVENIR</span><span class="logo-sub">MEDICAL CARE</span></span></a>
+  <h1 style="margin-top:56px">Tre demo per decidere navigazione e livello di movimento</h1>
+  <p class="intro">Contenuti, colori e caratteri sono gli stessi. Cambiano tre cose: come si arriva ai servizi, l'apertura della home e il modo in cui viene spiegata la mammografia 3D.</p>
+  <div class="scroll-x">
+  <table class="tab">
+    <thead><tr><td></td><th scope="col">A. Essenziale</th><th scope="col">B. Via di mezzo <span class="consiglio">Consigliata</span></th><th scope="col">C. Immersiva</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Barra</th><td>Chi siamo, Contatti. I servizi stanno in home.</td><td>Senologia, Ginecologia, Radiologia, Chi siamo, Contatti. Nessun menu nascosto.</td><td>Servizi (a tendina), Chi siamo, Contatti.</td></tr>
+      <tr><th scope="row">Apertura</th><td>Titolo e foto del mammografo. La curva del logo si disegna una volta.</td><td>Titolo e accesso diretto ai tre esami di senologia.</td><td>Scena 3D a tutto schermo.</td></tr>
+      <tr><th scope="row">Tomosintesi</th><td>Confronto 2D / 3D che si usa con un clic e uno slider.</td><td>Sezione guidata dallo scroll in 5 passaggi (SVG, leggera).</td><td>Scena WebGL guidata dallo scroll: arco, strati, reperto.</td></tr>
+      <tr><th scope="row">Peso e rischi</th><td>Minimo. Va bene ovunque.</td><td>Basso. Funziona anche su telefoni datati.</td><td>Three.js, circa 600 KB in più. Su telefoni vecchi può essere lenta.</td></tr>
+      <tr><td></td><td><a class="btn btn-vuoto" href="demo-a.html">Apri demo A</a></td><td><a class="btn btn-pieno" href="demo-b.html">Apri demo B</a></td><td><a class="btn btn-vuoto" href="demo-c.html">Apri demo C</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="altro">Pagina di esempio per un singolo esame: <a href="servizio-mammografia-3d.html">Mammografia 3D con tomosintesi</a>. I campi evidenziati in giallo sono segnaposto da confermare.</p>
+</main>
+</body>
+</html>

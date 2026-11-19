@@ -1,0 +1,42 @@
+.hero-b { padding: clamp(40px, 6vw, 80px) 0 clamp(64px, 8vw, 104px); }
+.hero-b h1 { max-width: 17ch; }
+.hero-b-griglia { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(28px, 6vw, 96px); align-items: start; }
+.hero-b .lead { margin-top: 28px; }
+.hero-b-foto { margin-bottom: 8px; }
+.hero-b-foto { aspect-ratio: 16/10; border-radius: 999px 999px var(--r-m) var(--r-m); overflow: hidden; background: var(--nebbia); }
+.hero-b-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 35%; }
+.hero-b .lead { font-size: 1.3rem; color: var(--grigio); max-width: 40ch; }
+.hero-b .credenziale { margin-top: 16px; font-size: 1rem; color: var(--grigio); max-width: 52ch; }
+.accesso { margin-top: 20px; display: grid; border-top: 1px solid var(--linea); }
+.accesso-titolo { font-weight: 700; padding: 16px 0 8px; }
+.accesso a { display: flex; justify-content: space-between; align-items: center; padding: 18px 4px; border-bottom: 1px solid var(--linea); text-decoration: none; font: 500 1.35rem/1.2 var(--f-titolo); transition: padding .2s var(--ease), color .2s; }
+.accesso a::after { content: ""; width: 34px; height: 2px; background: var(--rosa); flex: none; transition: width .2s var(--ease); }
+.accesso a:hover { padding-left: 12px; }
+.accesso a:hover::after { width: 54px; }
+@media (max-width: 860px) { .hero-b-griglia { grid-template-columns: 1fr; } .hero-b-foto { aspect-ratio: 16/10; } }
+
+.storia { height: 520vh; background: var(--nebbia); position: relative; }
+.storia-sticky { position: sticky; top: 84px; height: calc(100vh - 84px); height: calc(100svh - 84px); display: flex; align-items: center; overflow: hidden; }
+.storia-griglia { width: 100%; display: grid; grid-template-columns: 5fr 6fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
+.passi-storia { position: relative; min-height: 270px; margin-top: 36px; }
+.passo { position: absolute; inset: 0 0 auto; opacity: 0; transform: translateY(10px); transition: opacity .4s var(--ease), transform .4s var(--ease); pointer-events: none; display: grid; gap: 12px; align-content: start; }
+.passo.attivo { opacity: 1; transform: none; pointer-events: auto; }
+.passo p { font-size: 1.2rem; max-width: 40ch; }
+.passo .btn { justify-self: start; margin-top: 12px; }
+.avanzamento { list-style: none; display: flex; gap: 8px; padding: 0; margin: 24px 0 0; }
+.avanzamento li { width: 36px; height: 4px; border-radius: 2px; background: var(--linea); transition: background-color .3s; }
+.avanzamento li.fatto { background: var(--rosa); }
+.storia-figura { margin: 0; }
+.storia-figura svg { width: 100%; max-height: 68vh; display: block; }
+.storia-figura figcaption { font-size: .85rem; color: var(--grigio); margin-top: 8px; }
+.storia .st-layer { transition: opacity .3s var(--ease), transform .45s var(--ease); }
+.storia .st-reperto { transition: opacity .3s var(--ease); }
+@media (max-width: 860px) {
+  .storia-sticky { align-items: start; padding-top: 16px; }
+  .storia-griglia { grid-template-columns: 1fr; gap: 8px; }
+  .storia-figura { order: -1; }
+  .storia-figura svg { max-height: 40vh; }
+  .storia-testo h2 { font-size: 1.5rem; }
+  .passi-storia { margin-top: 12px; min-height: 230px; }
+  .passo p { font-size: 1.1rem; }
+}

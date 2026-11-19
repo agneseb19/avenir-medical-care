@@ -626,3 +626,15 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
   .hero-azioni .btn-vuoto svg { width: 16px; height: 16px; }
 }
 @media (max-width: 760px) { .hero-azioni { justify-content: center !important; } }
+
+/* Home: l'incontro tra Praemedica e la dottoressa */
+.incontro { display: flex; align-items: stretch; gap: 12px; margin-top: 32px; }
+.inc-voce { flex: 1 1 0; display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 76px; padding: 12px 18px; background: #fff; border: 1px solid var(--bordo); border-radius: 20px; transition: transform .45s var(--ease), box-shadow .45s; }
+.inc-voce:hover { transform: translateY(-3px); box-shadow: var(--ombra); }
+.inc-logo { height: 34px; width: auto; max-width: 100%; }
+.inc-foto { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center; flex: none; box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px var(--rosa); }
+.inc-voce b { display: block; font-size: 14.5px; font-weight: 600; letter-spacing: -.01em; line-height: 1.25; }
+.inc-voce small { display: block; font-size: 13px; color: var(--grigio); }
+.inc-piu { align-self: center; flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--rosa); color: #fff; display: grid; place-items: center; font-size: 20px; font-weight: 500; line-height: 1; }
+.intro-dati { margin-top: 20px; }
+@media (max-width: 760px) { .incontro { flex-direction: column; gap: 8px; } .inc-piu { width: 30px; height: 30px; font-size: 18px; } .inc-voce { justify-content: flex-start; } .inc-voce b { font-size: 16px; } .inc-voce small { font-size: 14.5px; } }

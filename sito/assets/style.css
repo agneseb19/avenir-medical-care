@@ -499,3 +499,5 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
 .prep-col li { padding-left: 18px; position: relative; }
 .prep-col li::before { content: ""; position: absolute; left: 0; top: .65em; width: 6px; height: 6px; border-radius: 50%; background: var(--rosa-2); }
 @media (max-width: 760px) { .prep { grid-template-columns: 1fr; } }
+
+.dott div > .btn { margin-top: 0; }

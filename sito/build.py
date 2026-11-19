@@ -407,6 +407,7 @@ chi = f'''
         <span>{ico('doc')}RM mammaria</span>
       </div>
       <p data-su style="margin-top:22px;font-size:14px;color:var(--grigio)">Si dedica anche alla divulgazione scientifica, con seminari e conferenze sulla prevenzione.</p>
+      <div data-su style="margin-top:28px">{btn('Visita il sito della dottoressa', 'https://www.francescasvegliati.it', extra=' target="_blank" rel="noopener"')}</div>
     </div>
   </div></section>
 

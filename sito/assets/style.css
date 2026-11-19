@@ -739,3 +739,43 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
 @media (max-width: 760px) { .nasc-mob { display: none; } .incontro .inc-voce + .inc-piu + .inc-voce { padding-left: 20px; } }
 .incontro .inc-voce { flex: 1 1 50% !important; box-sizing: border-box; }
 @media (max-width: 760px) { .incontro .inc-voce + .inc-piu + .inc-voce { padding-left: 22px; padding-right: 8px; } .incontro .inc-voce:first-child { padding-right: 22px; padding-left: 8px; } }
+
+/* telefono: sezione mammografia 3D compatta */
+@media (max-width: 760px) {
+  .tomo-grid { display: flex !important; flex-direction: column; gap: 0; }
+  .tomo-grid > div:first-child { display: contents; }
+  .tomo .sopra { order: 1; }
+  .tomo .h2 { order: 2; font-size: 27px; }
+  .tomo .lead { order: 3; font-size: 16px; margin-top: 12px; }
+  .tomo .prova { order: 4; margin-top: 22px; padding: 10px; border-radius: 22px; }
+  .tomo-punti { display: none; }
+  .tomo .tomo-grid > div > .btn, .tomo .btn { order: 5; align-self: stretch; justify-content: space-between; margin-top: 18px; }
+  .prova-tab button { height: 38px; font-size: 13.5px; }
+  .prova svg { max-height: 210px; margin: 6px auto 2px; }
+  .prova-sotto { min-height: 0; padding: 0 4px 6px; font-size: 14.5px; }
+  .prova-sotto label { font-size: 14.5px; margin-bottom: 4px; }
+  .prova-nota { font-size: 12.5px; padding: 0 4px; }
+}
+
+/* telefono: correzioni dal giro completo */
+@media (max-width: 760px) {
+  /* hero: tutto il contenuto sopra la barra in basso */
+  .hero:not(.senza-media) .hero-box { min-height: calc(100svh - 84px - 96px); }
+  .hero:not(.senza-media) .hero-grid { padding-bottom: 22px; }
+  /* dottoressa: foto più piccola, testo essenziale */
+  .dott-grid { gap: 20px; }
+  .dott-foto { max-width: 230px; margin: 0 auto; }
+  .dott .dott-testo { display: none; }
+  .dott .ruolo { font-size: 16.5px; }
+  .cred { margin-top: 18px; gap: 10px; }
+  .cred li { font-size: 15.5px; }
+  .dott div > .btn, .dott .btn { height: 48px; }
+  /* piè di pagina più corto */
+  .footer-gigante { display: none; }
+  .footer { padding: 44px 0 24px; }
+  .footer-grid { gap: 22px 16px; }
+  .footer h4 { margin-bottom: 10px; }
+  .footer ul { gap: 8px; font-size: 15px; }
+  .footer-legale { margin-top: 28px; }
+  .crediti { font-size: 12px !important; }
+}

@@ -362,7 +362,7 @@ ARCO_TOMO = '''<svg viewBox="0 0 220 150" role="img" aria-label="Schema della to
 </svg>'''
 
 chi = f'''
-  {hero([('Home', 'index.html'), ('Chi siamo', None)], 'Chi siamo', 'Un poliambulatorio nuovo, nato da due esperienze: quella clinica di una senologa ospedaliera e quella organizzativa di un centro diagnostico.', 'donna1.jpg', 'Ritratto di una donna al tramonto')}
+  {hero([('Home', 'index.html'), ('Chi siamo', None)], 'Chi siamo', 'Un poliambulatorio nuovo, nato da due esperienze: quella clinica di una senologa ospedaliera e quella organizzativa di un centro diagnostico.', 'pm-tomo.jpg', 'La sala mammografia con la postazione di refertazione')}
 
   <section class="sez"><div class="wrap split">
     <div>
@@ -393,7 +393,7 @@ chi = f'''
   </div></section>
 
   <section class="sez" id="dottoressa" style="padding-top:0"><div class="wrap dott-grid">
-    <div class="dott-foto" data-par="-6"><img src="assets/img/svegliati-hd.jpg" alt="La dottoressa Francesca Svegliati, in camice bianco, alla scrivania dello studio" loading="lazy"></div>
+    <div class="dott-foto" data-par="-6"><img src="assets/img/svegliati-2.jpg" style="object-position:45% 0%" alt="La dottoressa Francesca Svegliati sorridente, in camice bianco" loading="lazy"></div>
     <div>
       <span class="sopra" data-su>Le competenze</span>
       <h2 class="h2" data-split>Tutta la diagnostica del seno</h2>

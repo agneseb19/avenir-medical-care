@@ -1,12 +1,12 @@
 # Avenir Medical Care
 
-Sito del poliambulatorio Avenir Medical Care (Roma): senologia con la dott.ssa Francesca Svegliati, mammografia 3D con tomosintesi, ginecologia e radiologia, in collaborazione con Praemedica.
+Sito del poliambulatorio Avenir Medical Care (Roma): senologia con la dott.ssa Francesca Svegliati, mammografia 3D con tomosintesi, ginecologia e radiologia.
 
 ## Struttura
 
 - `sito/`: il sito.
   - `index.html`: la Home. Barra di navigazione e piè di pagina si modificano qui.
-  - `build.py`: genera tutte le altre pagine (servizi, mammografia 3D, visita senologica, ecografia mammaria, ginecologia, radiologia, chi siamo, contatti) riusando barra e piè di pagina della Home. Dopo ogni modifica: `python3 build.py`.
+  - `build.py`: genera tutte le altre pagine (prestazioni, senologia, mammografia 3D, visita senologica, ecografia mammaria, ginecologia, radiologia, medici, chi siamo, contatti) riusando barra e piè di pagina della Home. Dopo ogni modifica: `python3 build.py`.
   - `assets/style.css`: gli stili.
   - `assets/main.js`: animazioni (GSAP + ScrollTrigger + Lenis) e interazioni.
   - `assets/strati.js`: lo schema animato della tomosintesi.
@@ -31,4 +31,4 @@ Poi apri http://localhost:8000.
 
 ## Crediti fotografici
 
-Ritratti e fiori da Unsplash: Maria Lupan, Nolan Manning, Jonathan Borba, gaspar zaldo, Štefan Štefančík, Annie Spratt, Anastasia Krachkovskaya, Alexandr Podvalny. Le foto dei macchinari e della dottoressa provengono da Praemedica e dal sito della dott.ssa Svegliati.
+Ritratti e fiori da Unsplash: Maria Lupan, Nolan Manning, Jonathan Borba, gaspar zaldo, Štefan Štefančík, Annie Spratt, Anastasia Krachkovskaya, Alexandr Podvalny. Le foto dei macchinari sono segnaposto da sostituire con quelle della sede; la foto della dottoressa proviene dal suo sito personale.

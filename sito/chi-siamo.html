@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chi siamo · Avenir Medical Care</title>
-<meta name="description" content="La storia di Avenir Medical Care, la dottoressa Francesca Svegliati e Praemedica.">
+<meta name="description" content="Avenir Medical Care: un poliambulatorio a Roma dedicato alla salute della donna.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -35,14 +35,14 @@
     <nav class="nav-link" aria-label="Principale">
       <a href="index.html">Home</a>
       <div class="tendina" data-tendina>
-        <button aria-expanded="false" aria-controls="mega">Servizi <svg><use href="#i-giu"/></svg></button>
+        <button aria-expanded="false" aria-controls="mega">Prestazioni <svg><use href="#i-giu"/></svg></button>
         <div class="mega" id="mega">
           <div class="mega-col">
-            <span>Senologia</span>
-            <a href="visita-senologica.html"><img src="assets/img/donna7.jpg" alt=""><span><b>Visita senologica</b><small>Colloquio ed esame clinico</small></span></a>
-            <a href="ecografia-mammaria.html"><img src="assets/img/medico2.jpg" alt=""><span><b>Ecografia mammaria</b><small>Senza radiazioni, indolore</small></span></a>
+            <span>Le prestazioni</span>
+            <a href="senologia.html"><img src="assets/img/donna7.jpg" alt=""><span><b>Senologia</b><small>Visita, ecografia, mammografia 3D</small></span></a>
             <a href="ginecologia.html"><img src="assets/img/donna4.jpg" alt=""><span><b>Ginecologia</b><small>Visita, Pap test, HPV test</small></span></a>
             <a href="radiologia.html"><img src="assets/img/pm-rx.jpg" alt=""><span><b>Radiologia</b><small>MOC e radiografie</small></span></a>
+            <a href="prestazioni.html" class="mega-tutte"><span><b>Tutte le prestazioni</b></span></a>
           </div>
           <a class="mega-promo" href="mammografia-3d.html">
             <span><b>Mammografia 3D<br>con tomosintesi</b></span>
@@ -51,6 +51,7 @@
           </a>
         </div>
       </div>
+      <a href="medici.html">Medici</a>
       <a href="chi-siamo.html" aria-current="page">Chi siamo</a>
       <a href="contatti.html">Contatti</a>
     </nav>
@@ -65,15 +66,15 @@
 <div class="menu-mob" id="menu-mob">
   <nav aria-label="Menu" class="menu-pagine">
     <a href="index.html">Home</a>
-    <a href="servizi.html">Servizi</a>
+    <a href="prestazioni.html">Prestazioni</a>
+    <a href="medici.html">Medici</a>
     <a href="chi-siamo.html">Chi siamo</a>
     <a href="contatti.html">Contatti</a>
   </nav>
-  <p class="menu-titolo">Esami e visite</p>
+  <p class="menu-titolo">Prestazioni</p>
   <div class="menu-servizi">
-    <a href="visita-senologica.html"><svg><use href="#i-cuore"/></svg>Visita senologica</a>
+    <a href="senologia.html"><svg><use href="#i-cuore"/></svg>Senologia</a>
     <a href="mammografia-3d.html"><svg><use href="#i-strati"/></svg>Mammografia 3D</a>
-    <a href="ecografia-mammaria.html"><svg><use href="#i-scudo"/></svg>Ecografia mammaria</a>
     <a href="ginecologia.html"><svg><use href="#i-scintilla"/></svg>Ginecologia</a>
     <a href="radiologia.html"><svg><use href="#i-doc"/></svg>Radiologia</a>
   </div>
@@ -87,7 +88,7 @@
 
   <section class="hero hero-pag">
     <div class="hero-box"><div class="hero-grid">
-      <div><nav class="briciole" aria-label="Sei qui" data-h><a href="index.html">Home</a> <svg><use href="#i-giu"/></svg> <span>Chi siamo</span></nav><h1 data-split>Chi siamo</h1><p class="lead" data-h>Un poliambulatorio nuovo, nato da due esperienze: quella clinica di una senologa ospedaliera e quella organizzativa di un centro diagnostico.</p><div class="hero-azioni" data-h><a class="btn " href="contatti.html#prenota" data-magnete>Prenota una visita<span class="ico"><svg><use href="#i-freccia"/></svg></span></a><a class="btn btn-vuoto" href="tel:+390600000000"><svg width="18" height="18"><use href="#i-tel"/></svg>06 0000 0000</a></div></div>
+      <div><nav class="briciole" aria-label="Sei qui" data-h><a href="index.html">Home</a> <svg><use href="#i-giu"/></svg> <span>Chi siamo</span></nav><h1 data-split>Chi siamo</h1><p class="lead" data-h>Un poliambulatorio nuovo a Roma, nato per offrire alle donne un unico punto di riferimento per la prevenzione e la diagnosi.</p><div class="hero-azioni" data-h><a class="btn " href="contatti.html#prenota" data-magnete>Prenota una visita<span class="ico"><svg><use href="#i-freccia"/></svg></span></a><a class="btn btn-vuoto" href="tel:+390600000000"><svg width="18" height="18"><use href="#i-tel"/></svg>06 0000 0000</a></div></div>
       <div class="hero-media">
           <svg class="hero-arco" viewBox="0 0 100 60" aria-hidden="true"><path d="M3 58 C 8 4, 92 4, 97 58" fill="none" stroke="#c98a8f" stroke-width=".7" stroke-linecap="round"/></svg>
           <div class="hero-foto"><img src="assets/img/pm-tomo.jpg" alt="La sala mammografia con la postazione di refertazione" fetchpriority="high"></div>
@@ -96,6 +97,21 @@
   </section>
 
   <section class="sez"><div class="wrap split">
+    <div>
+      <span class="sopra" data-su>Com’è nato</span>
+      <h2 class="h2" data-split>Un solo centro per la salute della donna</h2>
+      <p class="lead" data-su>Avenir nasce dall’idea di riunire in un unico luogo le visite e gli esami di cui una donna ha bisogno nel corso della vita: senologia, ginecologia e radiologia.</p>
+      <p data-su style="margin-top:18px;color:var(--grigio);max-width:56ch">Medici specialisti con esperienza ospedaliera e tecnologia di ultima generazione, a partire dalla mammografia 3D con tomosintesi, per una prevenzione accurata, senza lunghe attese e con il tempo di spiegare ogni risultato.</p>
+      <div class="righe">
+        <div class="riga"><span class="riga-ico"><svg><use href="#i-scudo"/></svg></span><span><b>Prevenzione accurata</b><small>Esami di qualità e medici esperti</small></span></div>
+        <div class="riga"><span class="riga-ico"><svg><use href="#i-cal"/></svg></span><span><b>Tutto in una mattina</b><small>Visita ed esami nello stesso appuntamento, quando possibile</small></span></div>
+        <div class="riga"><span class="riga-ico"><svg><use href="#i-cuore"/></svg></span><span><b>Il tempo che serve</b><small>Ogni risultato spiegato con calma</small></span></div>
+      </div>
+    </div>
+    <div class="split-foto"><img src="assets/img/donna1.jpg" alt="Ritratto di una donna al tramonto" loading="lazy"></div>
+  </div></section>
+
+  <section class="sez" style="padding-top:0"><div class="wrap split">
     <div>
       <span class="sopra" data-su>Il nome e il logo</span>
       <h2 class="h2" data-split>Avenir vuol dire futuro</h2>
@@ -118,66 +134,29 @@
     </div>
   </div></section>
 
-  <section class="sez" style="padding-top:0"><div class="wrap split" style="align-items:start">
+  <section class="sez" id="dove" style="padding-top:0"><div class="wrap split" style="align-items:stretch">
     <div>
-      <span class="sopra" data-su>La nostra storia</span>
-      <h2 class="h2" data-split>Come siamo arrivati qui</h2>
-      <p class="lead" data-su>Dalla Breast Unit di uno dei principali ospedali di Roma a uno studio dedicato alla salute della donna.</p>
-    </div>
-    <div class="tempo" data-tempo>
-      <div class="tempo-linea"><i></i></div>
-      <div class="tappa"><b>San Camillo Forlanini</b><h3>Primario della Senologia</h3><p>La dottoressa Svegliati guida la Diagnostica per Immagini in Senologia e la Breast Unit, insieme a chirurgia oncologica, oncologia medica e radioterapia.</p></div>
-      <div class="tappa"><b>2025</b><h3>Nasce “Pronto Nodulo”</h3><p>Al San Camillo parte un canale dedicato alle donne con un’anomalia al seno che hanno bisogno di una risposta rapida.</p></div>
-      <div class="tappa"><b>2025</b><h3>Nasce Praemedica</h3><p>Un centro diagnostico polispecialistico, con un approccio multidisciplinare che mette il paziente al centro.</p></div>
-      <div class="tappa"><b>2026</b><h3>Mammografia con intelligenza artificiale</h3><p>Al San Camillo la senologia integra l’IA nei mammografi di ultima generazione.</p></div>
-      <div class="tappa"><b>2026</b><h3>Apre Avenir</h3><p>A Roma, in Viale Mazzini: senologia, ginecologia e radiologia nello stesso studio. <span class="segnaposto">data da confermare</span></p></div>
-    </div>
-  </div></section>
-
-  <section class="scuro"><div class="wrap split">
-    <div>
-      <a href="https://praemedica.it" target="_blank" rel="noopener" data-su style="display:inline-block;margin-bottom:22px"><img src="assets/img/praemedica-logo-bianco.png" alt="Praemedica" width="617" height="124" style="height:44px;width:auto"></a>
-      <h2 class="h2" data-split>Il partner organizzativo</h2>
-      <p class="lead" data-su>Praemedica è un centro diagnostico polispecialistico nato nel 2025, con oltre venti specialità e una diagnostica per immagini completa. Porta ad Avenir la sua organizzazione: prenotazioni, accoglienza e tempi di attesa brevi.</p>
+      <span class="sopra" data-su>Dove siamo</span>
+      <h2 class="h2" data-split>Nel cuore di Roma</h2>
+      <p class="lead" data-su>Siamo in Viale Giuseppe Mazzini 142, nel quartiere Della Vittoria, a pochi minuti da Piazza Mazzini e dal quartiere Prati.</p>
       <div class="righe">
-        <div class="riga"><span class="riga-ico"><svg><use href="#i-scudo"/></svg></span><span><b>Più di 20 specialità</b><small>Dalla cardiologia all’ortopedia</small></span></div>
-        <div class="riga"><span class="riga-ico"><svg><use href="#i-strati"/></svg></span><span><b>Diagnostica per immagini</b><small>Mammografia 3D, MOC, radiografie</small></span></div>
-        <div class="riga"><span class="riga-ico"><svg><use href="#i-cal"/></svg></span><span><b>Prenotazioni semplici</b><small>Telefono, WhatsApp e online</small></span></div>
+        <div class="riga"><span class="riga-ico"><svg><use href="#i-pin"/></svg></span><span><b>Viale Giuseppe Mazzini 142, Roma</b><small>Indirizzo da confermare</small></span></div>
+        <div class="riga"><span class="riga-ico"><svg><use href="#i-scintilla"/></svg></span><span><b>Con i mezzi</b><small>Metro A e autobus nelle vicinanze: indicazioni da completare</small></span></div>
+        <a class="riga" href="contatti.html"><span class="riga-ico"><svg><use href="#i-cal"/></svg></span><span><b>Orari e contatti</b><small>Telefono, WhatsApp e orari della segreteria</small></span><svg><use href="#i-freccia"/></svg></a>
       </div>
-      <div style="margin-top:28px" data-su><a class="btn btn-chiaro" href="https://praemedica.it" target="_blank" rel="noopener">Visita il sito di Praemedica<span class="ico"><svg><use href="#i-freccia"/></svg></span></a></div>
     </div>
-    <div class="split-foto"><img src="assets/img/pm-opt.jpg" alt="L’ortopantomografo di Praemedica" loading="lazy"></div>
+    <iframe class="mappa" title="Mappa: Viale Giuseppe Mazzini 142, Roma" src="https://maps.google.com/maps?q=Viale%20Giuseppe%20Mazzini%20142%20Roma&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div></section>
 
-  <section class="sez" id="dottoressa"><div class="wrap dott-grid">
-    <div class="dott-foto" data-par="-6"><img src="assets/img/svegliati-ritratto.jpg" alt="La dottoressa Francesca Svegliati, in camice bianco, alla scrivania dello studio" loading="lazy"></div>
-    <div>
-      <span class="sopra" data-su>La dottoressa</span>
-      <h2 class="h2" data-split>Francesca Svegliati</h2>
-      <p class="lead" data-su style="margin-top:12px">Medico specialista in Diagnostica per Immagini, con una consolidata esperienza in senologia.</p>
-      <p data-su style="margin-top:18px;color:var(--grigio);max-width:56ch">Fino ad agosto 2026 ha guidato la Diagnostica per Immagini in Senologia e la Breast Unit del San Camillo Forlanini, lavorando ogni giorno insieme a chirurghi, oncologi e radioterapisti. Ha organizzato i percorsi diagnostico-terapeutici della Breast Unit e porta avanti l’attività di divulgazione con seminari e conferenze sulla prevenzione.</p>
-      <ul class="cred">
-        <li data-su><svg><use href="#i-check"/></svg><span><b>Formazione</b> · Laurea in Medicina alla Sapienza di Roma, specializzazione in Radiologia</span></li>
-        <li data-su><svg><use href="#i-check"/></svg><span><b>San Camillo Forlanini</b> · Primario di Diagnostica per Immagini in Senologia e Responsabile della Breast Unit</span></li>
-        <li data-su><svg><use href="#i-check"/></svg><span><b>Villa Benedetta</b> · Direzione scientifica del Centro di Senologia</span></li>
-      </ul>
-      <div data-su style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px"><a class="btn " href="contatti.html#prenota">Prenota con la dottoressa<span class="ico"><svg><use href="#i-freccia"/></svg></span></a><a class="btn btn-vuoto" href="https://www.francescasvegliati.it" target="_blank" rel="noopener">Il suo sito personale</a></div>
+  <section class="sez" style="padding-top:0"><div class="wrap">
+    <div class="testa"><div><span class="sopra" data-su>I nostri valori</span><h2 class="h2" data-split>Quello in cui crediamo</h2></div></div>
+    <div class="valori">
+      <div class="dato" data-su><svg><use href="#i-scudo"/></svg><b>Esperienza</b><small>Medici specialisti con anni di attività ospedaliera.</small></div>
+      <div class="dato" data-su><svg><use href="#i-strati"/></svg><b>Tecnologia</b><small>Strumenti di nuova generazione per immagini più chiare.</small></div>
+      <div class="dato" data-su><svg><use href="#i-cuore"/></svg><b>Ascolto</b><small>Il tempo di spiegare, rispondere e rassicurare.</small></div>
+      <div class="dato" data-su><svg><use href="#i-scintilla"/></svg><b>Prevenzione</b><small>Controlli regolari, per guardare avanti con serenità.</small></div>
     </div>
   </div></section>
-
-  <section class="sez" id="ad-avenir" style="padding-top:0"><div class="wrap split" style="align-items:start">
-    <div>
-      <span class="sopra" data-su>Con la dottoressa</span>
-      <h2 class="h2" data-split>Cosa fa per te ad Avenir</h2>
-      <p class="lead" data-su>Ad Avenir la dottoressa Svegliati segue la senologia: tre esami, che si possono fare anche nella stessa mattina.</p>
-    </div>
-    <div class="righe">
-      <a class="riga" href="visita-senologica.html"><span class="riga-ico"><svg><use href="#i-cuore"/></svg></span><span><b>Visita senologica</b><small>Colloquio, esame clinico e lettura dei tuoi esami</small></span><svg><use href="#i-freccia"/></svg></a>
-      <a class="riga" href="ecografia-mammaria.html"><span class="riga-ico"><svg><use href="#i-scudo"/></svg></span><span><b>Ecografia mammaria</b><small>Ultrasuoni, senza radiazioni e indolore</small></span><svg><use href="#i-freccia"/></svg></a>
-      <a class="riga" href="mammografia-3d.html"><span class="riga-ico"><svg><use href="#i-strati"/></svg></span><span><b>Mammografia 3D con tomosintesi</b><small>Il seno ricostruito in strati sottili</small></span><svg><use href="#i-freccia"/></svg></a>
-    </div>
-  </div></section>
-
 
   <section class="cta" style="margin-top:clamp(40px,5vw,80px)">
     <div class="cta-bg" data-par="-10"><img src="assets/img/donna4.jpg" alt="" loading="lazy"></div>
@@ -196,10 +175,9 @@
       <div>
         <a class="logo" href="index.html"><svg style="color:var(--blu)"><use href="#i-logo"/></svg><span class="logo-t"><b>AVENIR</b><small>MEDICAL CARE</small></span></a>
         <p>Poliambulatorio di senologia, ginecologia e radiologia a Roma.</p>
-        <a class="partner partner-piede" href="https://praemedica.it" target="_blank" rel="noopener"><span>In collaborazione con</span><img src="assets/img/praemedica-logo.png" alt="Praemedica" width="617" height="124" loading="lazy"></a>
       </div>
-      <div><h4>Servizi</h4><ul><li><a href="visita-senologica.html">Visita senologica</a></li><li><a href="ecografia-mammaria.html">Ecografia mammaria</a></li><li><a href="mammografia-3d.html">Mammografia 3D</a></li><li><a href="ginecologia.html">Ginecologia</a></li><li><a href="radiologia.html">Radiologia</a></li></ul></div>
-      <div><h4>Studio</h4><ul><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html">Contatti</a></li><li><a href="contatti.html#prenota">Prenota</a></li></ul></div>
+      <div><h4>Prestazioni</h4><ul><li><a href="senologia.html">Senologia</a></li><li><a href="mammografia-3d.html">Mammografia 3D</a></li><li><a href="ginecologia.html">Ginecologia</a></li><li><a href="radiologia.html">Radiologia</a></li></ul></div>
+      <div><h4>Studio</h4><ul><li><a href="medici.html">Medici</a></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html">Contatti</a></li><li><a href="contatti.html#prenota">Prenota</a></li></ul></div>
       <div><h4>Contatti</h4><ul><li>Viale Giuseppe Mazzini 142, Roma</li><li><a href="tel:+390600000000">06 0000 0000</a></li><li><a href="mailto:info@example.com">info@example.com</a></li><li><span class="segnaposto">Dati da confermare</span></li></ul></div>
     </div>
     <div class="footer-gigante" aria-hidden="true" data-gigante>AVENIR</div>

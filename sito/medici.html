@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medici · Avenir Medical Care</title>
+<meta name="description" content="I medici specialisti di Avenir Medical Care a Roma.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-freccia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></symbol>
+    <symbol id="i-strati" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 17.5 9 5 9-5" opacity=".5"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+    <symbol id="i-cuore" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-scintilla" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c.5 4.5 2.5 8.5 9 9-6.5.5-8.5 4.5-9 9-.5-4.5-2.5-8.5-9-9 6.5-.5 8.5-4.5 9-9Z"/></symbol>
+    <symbol id="i-scudo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-giu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12Z"/></symbol>
+    <symbol id="i-logo" viewBox="0 0 40 36"><path d="M3 34 L20 2.6 L37 34" fill="none" stroke="currentColor" stroke-width="3.2"/><path d="M5.2 30.6 C10 20 23 16.5 31.3 23.6" fill="none" stroke="#c98a8f" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="logo" href="index.html" aria-label="Avenir Medical Care, home"><svg style="color:var(--blu)"><use href="#i-logo"/></svg><span class="logo-t"><b>AVENIR</b><small>MEDICAL CARE</small></span></a>
+    <nav class="nav-link" aria-label="Principale">
+      <a href="index.html">Home</a>
+      <div class="tendina" data-tendina>
+        <button aria-expanded="false" aria-controls="mega">Prestazioni <svg><use href="#i-giu"/></svg></button>
+        <div class="mega" id="mega">
+          <div class="mega-col">
+            <span>Le prestazioni</span>
+            <a href="senologia.html"><img src="assets/img/donna7.jpg" alt=""><span><b>Senologia</b><small>Visita, ecografia, mammografia 3D</small></span></a>
+            <a href="ginecologia.html"><img src="assets/img/donna4.jpg" alt=""><span><b>Ginecologia</b><small>Visita, Pap test, HPV test</small></span></a>
+            <a href="radiologia.html"><img src="assets/img/pm-rx.jpg" alt=""><span><b>Radiologia</b><small>MOC e radiografie</small></span></a>
+            <a href="prestazioni.html" class="mega-tutte"><span><b>Tutte le prestazioni</b></span></a>
+          </div>
+          <a class="mega-promo" href="mammografia-3d.html">
+            <span><b>Mammografia 3D<br>con tomosintesi</b></span>
+            <p>Il seno ricostruito in strati sottili, letti uno alla volta.</p>
+            <span class="btn btn-chiaro" style="height:42px;font-size:13.5px;padding-left:16px">Scopri<span class="ico" style="width:30px;height:30px"><svg><use href="#i-freccia"/></svg></span></span>
+          </a>
+        </div>
+      </div>
+      <a href="medici.html" aria-current="page">Medici</a>
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <div class="nav-dx">
+      <a class="nav-tel" href="tel:+390600000000" aria-label="Chiama 06 0000 0000"><svg><use href="#i-tel"/></svg></a>
+      <a class="btn" href="contatti.html#prenota" data-magnete>Prenota<span class="ico"><svg><use href="#i-freccia"/></svg></span></a>
+      <button class="burger" aria-expanded="false" aria-controls="menu-mob" aria-label="Apri il menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-mob" id="menu-mob">
+  <nav aria-label="Menu" class="menu-pagine">
+    <a href="index.html">Home</a>
+    <a href="prestazioni.html">Prestazioni</a>
+    <a href="medici.html">Medici</a>
+    <a href="chi-siamo.html">Chi siamo</a>
+    <a href="contatti.html">Contatti</a>
+  </nav>
+  <p class="menu-titolo">Prestazioni</p>
+  <div class="menu-servizi">
+    <a href="senologia.html"><svg><use href="#i-cuore"/></svg>Senologia</a>
+    <a href="mammografia-3d.html"><svg><use href="#i-strati"/></svg>Mammografia 3D</a>
+    <a href="ginecologia.html"><svg><use href="#i-scintilla"/></svg>Ginecologia</a>
+    <a href="radiologia.html"><svg><use href="#i-doc"/></svg>Radiologia</a>
+  </div>
+  <div class="menu-azioni">
+    <a class="btn" href="tel:+390600000000"><svg><use href="#i-tel"/></svg>Chiama</a>
+    <a class="btn btn-vuoto" href="#"><svg><use href="#i-msg"/></svg>WhatsApp</a>
+  </div>
+</div>
+
+<main id="contenuto">
+
+  <section class="hero hero-pag senza-media">
+    <div class="hero-box"><div class="hero-grid">
+      <div><nav class="briciole" aria-label="Sei qui" data-h><a href="index.html">Home</a> <svg><use href="#i-giu"/></svg> <span>Medici</span></nav><h1 data-split>I nostri medici</h1><p class="lead" data-h>Stiamo completando la squadra di specialisti di Avenir. Presto qui troverai i profili dei medici di ogni area.</p></div>
+      
+    </div></div>
+  </section>
+
+  <section class="sez" style="padding-top:clamp(48px,6vw,80px)"><div class="wrap">
+    <div class="medici-vuoto">
+      <a class="medico-area" href="senologia.html"><span class="riga-ico"><svg><use href="#i-cuore"/></svg></span><b>Senologia</b><small>Profili in arrivo</small></a>
+      <a class="medico-area" href="ginecologia.html"><span class="riga-ico"><svg><use href="#i-scintilla"/></svg></span><b>Ginecologia</b><small>Profili in arrivo</small></a>
+      <a class="medico-area" href="radiologia.html"><span class="riga-ico"><svg><use href="#i-doc"/></svg></span><b>Radiologia</b><small>Profili in arrivo</small></a>
+    </div>
+    <p class="medici-nota" data-su>Vuoi sapere quale specialista ti visiterà? Chiama la segreteria al <a href="tel:+390600000000">06 0000 0000</a>.</p>
+  </div></section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html"><svg style="color:var(--blu)"><use href="#i-logo"/></svg><span class="logo-t"><b>AVENIR</b><small>MEDICAL CARE</small></span></a>
+        <p>Poliambulatorio di senologia, ginecologia e radiologia a Roma.</p>
+      </div>
+      <div><h4>Prestazioni</h4><ul><li><a href="senologia.html">Senologia</a></li><li><a href="mammografia-3d.html">Mammografia 3D</a></li><li><a href="ginecologia.html">Ginecologia</a></li><li><a href="radiologia.html">Radiologia</a></li></ul></div>
+      <div><h4>Studio</h4><ul><li><a href="medici.html">Medici</a></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html">Contatti</a></li><li><a href="contatti.html#prenota">Prenota</a></li></ul></div>
+      <div><h4>Contatti</h4><ul><li>Viale Giuseppe Mazzini 142, Roma</li><li><a href="tel:+390600000000">06 0000 0000</a></li><li><a href="mailto:info@example.com">info@example.com</a></li><li><span class="segnaposto">Dati da confermare</span></li></ul></div>
+    </div>
+    <div class="footer-gigante" aria-hidden="true" data-gigante>AVENIR</div>
+    <div class="footer-legale"><span>© 2026 Avenir Medical Care. Direttore sanitario: <span class="segnaposto">da inserire</span></span><span><a href="#">Privacy</a> · <a href="#">Cookie</a></span></div>
+    <p class="crediti">Foto: Maria Lupan, Nolan Manning, Jonathan Borba, gaspar zaldo, Annie Spratt, Anastasia Krachkovskaya, Alexandr Podvalny (Unsplash). Il mammografo è dello studio.</p>
+  </div>
+</footer>
+
+<nav class="barra-azioni" aria-label="Azioni rapide">
+  <a href="tel:+390600000000"><svg><use href="#i-tel"/></svg><span>Chiama</span></a>
+  <a href="#"><svg><use href="#i-msg"/></svg><span>WhatsApp</span></a>
+  <a class="prenota" href="contatti.html#prenota"><svg><use href="#i-cal"/></svg><span>Prenota</span></a>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/strati.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

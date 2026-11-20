@@ -115,50 +115,101 @@ def correlati(*chiavi):
   </div></section>'''
 
 
-# =============================================================== SERVIZI
-servizi = f'''
-  {hero([('Home', 'index.html'), ('Servizi', None)], 'I nostri servizi', 'Senologia, ginecologia e radiologia in un unico studio a Roma. Ogni esame ha la sua pagina: come si svolge, come prepararsi, cosa portare.', 'pm-tomo.jpg', 'La sala mammografia con la postazione di refertazione')}
+# =============================================================== PRESTAZIONI
+prestazioni = f"""
+  {hero([('Home', 'index.html'), ('Prestazioni', None)], 'Le prestazioni', 'Senologia, ginecologia e radiologia in un unico poliambulatorio a Roma. Scegli l’area che ti interessa.', 'pm-tomo.jpg', 'La sala mammografia con la postazione di refertazione')}
 
-  <section class="sez" id="senologia"><div class="wrap">
-    {testa('Senologia', 'La salute del seno, con la dottoressa Svegliati', 'Visita, ecografia e mammografia 3D con tomosintesi: gli esami si possono combinare nella stessa mattina.')}
+  <section class="sez"><div class="wrap">
+    {testa('Le aree', 'Tre aree, un solo centro', 'Ogni area ha la sua pagina con le visite e gli esami, e ogni esame spiega come si svolge e come prepararsi.')}
     <div class="griglia">
-      {card('donna7.jpg', 'Visita senologica', "Il colloquio, l'esame clinico del seno e la lettura degli esami che hai già fatto.", 'visita-senologica.html', 'Una donna sorride')}
-      {card('pm-tomo2.jpg', 'Mammografia 3D con tomosintesi', 'Il seno ricostruito in strati sottili, letti uno alla volta. Utile con il seno denso.', 'mammografia-3d.html', 'Il mammografo con tomosintesi')}
-      {card('medico2.jpg', 'Ecografia mammaria', 'Ultrasuoni, senza radiazioni e indolore. Spesso affianca la mammografia.', 'ecografia-mammaria.html', 'Una mano tiene uno stetoscopio')}
+      {card('donna7.jpg', 'Senologia', 'Visita senologica, ecografia mammaria e mammografia 3D con tomosintesi.', 'senologia.html', 'Una donna sorride')}
+      {card('donna4.jpg', 'Ginecologia', 'Visita ginecologica, visita di controllo, Pap test, HPV test ed ecografia pelvica.', 'ginecologia.html', 'Una donna sorride seduta a un tavolo')}
+      {card('pm-moc.jpg', 'Radiologia', 'Densitometria ossea (MOC) e radiografie.', 'radiologia.html', 'Il densitometro per la MOC')}
     </div>
   </div></section>
 
   <section class="sez" style="padding-top:0"><div class="wrap split">
-    <div class="split-foto"><img src="assets/img/donna6.jpg" alt="Una donna sorridente, all'aperto" loading="lazy"></div>
+    <div class="split-foto"><img src="assets/img/pm-tomo2.jpg" alt="Il mammografo con tomosintesi" loading="lazy"></div>
+    <div>
+      <span class="sopra" data-su>In evidenza</span>
+      <h2 class="h2" data-split>Mammografia 3D con tomosintesi</h2>
+      <p class="lead" data-su>Il seno ricostruito in strati sottili, letti uno alla volta: immagini più chiare, soprattutto con il seno denso. Per te si svolge come una normale mammografia.</p>
+      <div style="margin-top:28px" data-su>{btn('Scopri come funziona', 'mammografia-3d.html')}</div>
+    </div>
+  </div></section>
+
+  {cta('Non sai quale esame ti serve?', 'Chiama la segreteria: ti aiutiamo a scegliere e ti proponiamo la prima data libera.')}
+"""
+pagina('prestazioni.html', 'Prestazioni · Avenir Medical Care', 'Senologia, ginecologia e radiologia a Roma.', 'Servizi', prestazioni)
+
+# il vecchio indirizzo rimanda alla pagina nuova
+(ROOT / 'servizi.html').write_text('<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Prestazioni · Avenir Medical Care</title><meta http-equiv="refresh" content="0; url=prestazioni.html"><link rel="canonical" href="prestazioni.html"></head><body><p><a href="prestazioni.html">Vai alle prestazioni</a></p></body></html>')
+
+# =============================================================== SENOLOGIA
+senologia = f"""
+  {hero([('Home', 'index.html'), ('Prestazioni', 'prestazioni.html'), ('Senologia', None)], 'Senologia', 'La salute del seno, dalla visita alla mammografia 3D. Le prestazioni di senologia sono a cura della dottoressa Francesca Svegliati.', 'donna7.jpg', 'Una donna sorride')}
+
+  <section class="sez"><div class="wrap">
+    {testa('Le prestazioni', 'Visite ed esami', 'Tre prestazioni che si possono fare anche nella stessa mattina. Apri quella che ti interessa per sapere come si svolge.')}
+    <div class="griglia">
+      {card('donna6.jpg', 'Visita senologica', 'Il colloquio, l’esame clinico del seno e la lettura degli esami che hai già fatto. Esci sapendo cosa fare e quando tornare.', 'visita-senologica.html', 'Una donna sorridente')}
+      {card('medico2.jpg', 'Ecografia mammaria', 'Un esame con ultrasuoni, senza radiazioni e indolore. Spesso affianca la mammografia, soprattutto con il seno denso.', 'ecografia-mammaria.html', 'Una mano tiene uno stetoscopio')}
+      {card('pm-tomo2.jpg', 'Mammografia 3D con tomosintesi', 'Il seno ricostruito in strati sottili, letti uno alla volta. Per te si svolge come una normale mammografia.', 'mammografia-3d.html', 'Il mammografo con tomosintesi')}
+    </div>
+  </div></section>
+
+  <section class="sez" style="padding-top:0"><div class="wrap split">
     <div>
       <span class="sopra" data-su>Percorsi combinati</span>
       <h2 class="h2" data-split>Più esami, una sola mattina</h2>
       <p class="lead" data-su>Quando serve, visita ed esami si fanno insieme: così esci con un quadro completo.</p>
       <div class="righe">
         {riga('cuore', 'Visita senologica + Mammografia 3D', 'Il controllo completo', 'mammografia-3d.html')}
-        {riga('cuore', 'Visita senologica + Ecografia mammaria bilaterale', 'Spesso indicata prima dei 40 anni', 'ecografia-mammaria.html')}
-        {riga('strati', 'Visita + Mammografia 3D + Ecografia mammaria', 'Il percorso più approfondito', 'mammografia-3d.html')}
-        {riga('strati', 'Mammografia 3D + Ecografia mammaria bilaterale', 'Due esami che si completano', 'mammografia-3d.html')}
-        {riga('scudo', 'Ecografia mammaria + Ecografia dei linfonodi', 'Su indicazione della dottoressa', 'ecografia-mammaria.html')}
+        {riga('cuore', 'Visita senologica + Ecografia mammaria', 'Spesso indicata prima dei 40 anni', 'ecografia-mammaria.html')}
+        {riga('strati', 'Visita + Mammografia 3D + Ecografia', 'Il percorso più approfondito', 'mammografia-3d.html')}
       </div>
     </div>
+    <div class="split-foto"><img src="assets/img/fiore1.jpg" alt="Una rosa su fondo rosa" loading="lazy"></div>
   </div></section>
 
-  <section class="sez" style="padding-top:0"><div class="wrap">
-    {testa('Ginecologia e radiologia', 'Anche questo, nello stesso studio')}
-    <div class="griglia" style="grid-template-columns:repeat(2,1fr)">
-      {card('donna4.jpg', 'Ginecologia', 'Visita ginecologica, visita di controllo, Pap test, HPV test ed ecografia pelvica.', 'ginecologia.html', 'Una donna sorride')}
-      {card('pm-moc.jpg', 'Radiologia', 'Densitometria ossea (MOC), radiografie e mammografia 3D con tomosintesi.', 'radiologia.html', 'Il densitometro per la MOC')}
+  <section class="sez" id="dottoressa" style="background:var(--cipria)"><div class="wrap dott-grid">
+    <div class="dott-foto" data-par="-6"><img src="assets/img/svegliati-ritratto.jpg" alt="La dottoressa Francesca Svegliati, in camice bianco, alla scrivania dello studio" loading="lazy"></div>
+    <div>
+      <span class="sopra" data-su>A cura di</span>
+      <h2 class="h2" data-split>Dott.ssa Francesca Svegliati</h2>
+      <p class="lead" data-su style="margin-top:12px">Le prestazioni di senologia di Avenir sono seguite dalla dottoressa Svegliati, medico specialista in Diagnostica per Immagini con una consolidata esperienza in senologia.</p>
+      <p data-su style="margin-top:18px;color:var(--grigio);max-width:56ch">Fino ad agosto 2026 ha guidato la Diagnostica per Immagini in Senologia e la Breast Unit del San Camillo Forlanini, lavorando ogni giorno insieme a chirurghi, oncologi e radioterapisti. Ha organizzato i percorsi diagnostico-terapeutici della Breast Unit e porta avanti l’attività di divulgazione con seminari e conferenze sulla prevenzione.</p>
+      <ul class="cred">
+        <li data-su><svg><use href="#i-check"/></svg><span><b>Formazione</b> · Laurea in Medicina alla Sapienza di Roma, specializzazione in Radiologia</span></li>
+        <li data-su><svg><use href="#i-check"/></svg><span><b>San Camillo Forlanini</b> · Primario di Diagnostica per Immagini in Senologia e Responsabile della Breast Unit</span></li>
+        <li data-su><svg><use href="#i-check"/></svg><span><b>Villa Benedetta</b> · Direzione scientifica del Centro di Senologia</span></li>
+      </ul>
+      <div data-su style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px">{btn('Prenota una visita senologica', 'contatti.html#prenota')}<a class="btn btn-vuoto" href="https://www.francescasvegliati.it" target="_blank" rel="noopener">Il suo sito personale</a></div>
     </div>
   </div></section>
 
-  {cta('Non sai quale esame ti serve?', 'Chiama la segreteria: ti aiutiamo a scegliere e ti proponiamo la prima data libera.')}
-'''
-pagina('servizi.html', 'Servizi · Avenir Medical Care', 'Senologia, ginecologia e radiologia a Roma: visita senologica, ecografia, mammografia 3D con tomosintesi.', 'Servizi', servizi)
+  {cta('Prenota il tuo controllo senologico', 'Chiama la segreteria o lascia il tuo numero: ti richiamiamo noi.')}
+"""
+pagina('senologia.html', 'Senologia · Avenir Medical Care', 'Senologia a Roma: visita senologica, ecografia mammaria e mammografia 3D con tomosintesi, a cura della dottoressa Francesca Svegliati.', 'Servizi', senologia)
+
+# =============================================================== MEDICI
+medici = f"""
+  {hero([('Home', 'index.html'), ('Medici', None)], 'I nostri medici', 'Stiamo completando la squadra di specialisti di Avenir. Presto qui troverai i profili dei medici di ogni area.', azioni=False)}
+
+  <section class="sez" style="padding-top:clamp(48px,6vw,80px)"><div class="wrap">
+    <div class="medici-vuoto">
+      <a class="medico-area" href="senologia.html"><span class="riga-ico">{ico('cuore')}</span><b>Senologia</b><small>Profili in arrivo</small></a>
+      <a class="medico-area" href="ginecologia.html"><span class="riga-ico">{ico('scintilla')}</span><b>Ginecologia</b><small>Profili in arrivo</small></a>
+      <a class="medico-area" href="radiologia.html"><span class="riga-ico">{ico('doc')}</span><b>Radiologia</b><small>Profili in arrivo</small></a>
+    </div>
+    <p class="medici-nota" data-su>Vuoi sapere quale specialista ti visiterà? Chiama la segreteria al <a href="{TEL_HREF}">{TEL}</a>.</p>
+  </div></section>
+"""
+pagina('medici.html', 'Medici · Avenir Medical Care', 'I medici specialisti di Avenir Medical Care a Roma.', 'medici.html', medici)
 
 # =============================================================== MAMMOGRAFIA 3D
 mammo = f'''
-  {hero([('Home', 'index.html'), ('Servizi', 'servizi.html'), ('Mammografia 3D', None)], 'Mammografia 3D con tomosintesi', 'Il seno ricostruito in strati sottili, letti uno alla volta. Per te si svolge come una normale mammografia.', 'pm-tomo2.jpg', 'Il mammografo con tomosintesi')}
+  {hero([('Home', 'index.html'), ('Prestazioni', 'prestazioni.html'), ('Senologia', 'senologia.html'), ('Mammografia 3D', None)], 'Mammografia 3D con tomosintesi', 'Il seno ricostruito in strati sottili, letti uno alla volta. Per te si svolge come una normale mammografia.', 'pm-tomo2.jpg', 'Il mammografo con tomosintesi')}
 
   <section class="storia" data-storia aria-label="Come funziona la tomosintesi">
     <div class="storia-box"><div class="storia-in"><div class="wrap storia-grid">
@@ -208,7 +259,7 @@ pagina('mammografia-3d.html', 'Mammografia 3D con tomosintesi · Avenir Medical 
 
 # =============================================================== VISITA SENOLOGICA
 visita = f'''
-  {hero([('Home', 'index.html'), ('Servizi', 'servizi.html'), ('Visita senologica', None)], 'Visita senologica', "Un colloquio, l'esame clinico del seno e la lettura dei tuoi esami. Esci sapendo cosa fare e quando tornare.", 'donna7.jpg', 'Una donna sorride')}
+  {hero([('Home', 'index.html'), ('Prestazioni', 'prestazioni.html'), ('Senologia', 'senologia.html'), ('Visita senologica', None)], 'Visita senologica', "Un colloquio, l'esame clinico del seno e la lettura dei tuoi esami. Esci sapendo cosa fare e quando tornare.", 'donna7.jpg', 'Una donna sorride')}
   <section class="sez"><div class="wrap">
     {testa('Come si svolge', 'La visita, passo dopo passo')}
     {fasi([('Il colloquio', 'La dottoressa ti chiede della tua storia, dei tuoi familiari e di eventuali disturbi.'), ("L'esame clinico", 'Osservazione e palpazione del seno e delle ascelle, con delicatezza.'), ('I tuoi esami', 'Mammografie ed ecografie già fatte vengono rilette e confrontate.'), ('Il piano', 'Ti spiega se servono altri esami e quando fare il prossimo controllo.')])}
@@ -219,7 +270,7 @@ visita = f'''
       <span class="sopra" data-su>Con chi</span>
       <h2 class="h2" data-split>Ti visita la dottoressa Francesca Svegliati</h2>
       <p class="lead" data-su>Fino ad agosto 2026 ha guidato la Diagnostica per Immagini in Senologia del San Camillo Forlanini. La visita può essere completata subito con ecografia o mammografia 3D.</p>
-      <div style="margin-top:28px" data-su>{btn('Conosci la dottoressa', 'chi-siamo.html#dottoressa')}</div>
+      <div style="margin-top:28px" data-su>{btn('Conosci la dottoressa', 'senologia.html#dottoressa')}</div>
     </div>
   </div></section>
   <section class="sez" style="padding-top:0"><div class="wrap">
@@ -234,7 +285,7 @@ pagina('visita-senologica.html', 'Visita senologica · Avenir Medical Care', 'Vi
 
 # =============================================================== ECOGRAFIA
 eco = f'''
-  {hero([('Home', 'index.html'), ('Servizi', 'servizi.html'), ('Ecografia mammaria', None)], 'Ecografia mammaria', 'Un esame con ultrasuoni: senza radiazioni, indolore, in pochi minuti. Spesso affianca la mammografia.', 'medico2.jpg', 'Una mano tiene uno stetoscopio')}
+  {hero([('Home', 'index.html'), ('Prestazioni', 'prestazioni.html'), ('Senologia', 'senologia.html'), ('Ecografia mammaria', None)], 'Ecografia mammaria', 'Un esame con ultrasuoni: senza radiazioni, indolore, in pochi minuti. Spesso affianca la mammografia.', 'medico2.jpg', 'Una mano tiene uno stetoscopio')}
   <section class="sez"><div class="wrap">
     {testa('Come si svolge', "L'esame, passo dopo passo")}
     {fasi([('Ti sdrai', 'Sul lettino, con il braccio sollevato dietro la testa.'), ('Il gel e la sonda', 'Un gel trasparente e una sonda che scorre sulla pelle. Non fa male.'), ('Le immagini', 'La dottoressa osserva il tessuto in tempo reale sullo schermo.'), ('Il risultato', "Ti spiega cosa ha visto e se l'ecografia va affiancata da altri esami.")])}
@@ -264,7 +315,7 @@ pagina('ecografia-mammaria.html', 'Ecografia mammaria · Avenir Medical Care', '
 
 # =============================================================== GINECOLOGIA
 gin = f'''
-  {hero([('Home', 'index.html'), ('Servizi', 'servizi.html'), ('Ginecologia', None)], 'Ginecologia', 'Prevenzione e controlli per la salute della donna, nello stesso studio della senologia.', 'donna4.jpg', 'Una donna sorride seduta a un tavolo')}
+  {hero([('Home', 'index.html'), ('Prestazioni', 'prestazioni.html'), ('Ginecologia', None)], 'Ginecologia', 'Prevenzione e controlli per la salute della donna, nello stesso studio della senologia.', 'donna4.jpg', 'Una donna sorride seduta a un tavolo')}
 
   <section class="sez"><div class="wrap split">
     <div>
@@ -305,7 +356,7 @@ pagina('ginecologia.html', 'Ginecologia · Avenir Medical Care', 'Visita ginecol
 
 # =============================================================== RADIOLOGIA
 rad = f'''
-  {hero([('Home', 'index.html'), ('Servizi', 'servizi.html'), ('Radiologia', None)], 'Radiologia', 'Densitometria ossea, radiografie e mammografia 3D: la diagnostica per immagini dello studio.', 'pm-rx.jpg', 'Il macchinario per le radiografie')}
+  {hero([('Home', 'index.html'), ('Prestazioni', 'prestazioni.html'), ('Radiologia', None)], 'Radiologia', 'Densitometria ossea, radiografie e mammografia 3D: la diagnostica per immagini dello studio.', 'pm-rx.jpg', 'Il macchinario per le radiografie')}
 
   <section class="sez"><div class="wrap">
     {testa('Gli esami', 'Diagnostica per immagini', 'L’elenco definitivo sarà pubblicato prima dell’apertura.')}
@@ -314,7 +365,7 @@ rad = f'''
       <div class="card"><div class="card-f"><img src="assets/img/pm-rx.jpg" alt="Il macchinario per le radiografie" loading="lazy"></div><div class="card-t"><h3>Radiografie</h3><p>Torace, colonna, bacino e anca, spalla, ginocchio, gomito, mano e piede, cranio.</p></div></div>
       <a class="card" href="mammografia-3d.html"><div class="card-f"><img src="assets/img/pm-tomo2.jpg" alt="Il mammografo con tomosintesi" loading="lazy"></div><div class="card-t"><h3>Mammografia 3D</h3><p>Bilaterale in tomosintesi, anche con ecografia e visita senologica.</p><span class="vai">Scopri {ico('freccia')}</span></div></a>
     </div>
-    <p style="margin-top:16px;font-size:13px"><span class="segnaposto">Elenco preso da Praemedica, da confermare per Avenir</span></p>
+    <p style="margin-top:16px;font-size:13px"><span class="segnaposto">Elenco da confermare</span></p>
   </div></section>
 
   <section class="sez" style="padding-top:0"><div class="wrap split inverti">
@@ -361,10 +412,25 @@ ARCO_TOMO = '''<svg viewBox="0 0 220 150" role="img" aria-label="Schema della to
   <rect x="55" y="114" width="110" height="10" rx="3" fill="#1f3a5f"/>
 </svg>'''
 
-chi = f'''
-  {hero([('Home', 'index.html'), ('Chi siamo', None)], 'Chi siamo', 'Un poliambulatorio nuovo, nato da due esperienze: quella clinica di una senologa ospedaliera e quella organizzativa di un centro diagnostico.', 'pm-tomo.jpg', 'La sala mammografia con la postazione di refertazione')}
+chi = f"""
+  {hero([('Home', 'index.html'), ('Chi siamo', None)], 'Chi siamo', 'Un poliambulatorio nuovo a Roma, nato per offrire alle donne un unico punto di riferimento per la prevenzione e la diagnosi.', 'pm-tomo.jpg', 'La sala mammografia con la postazione di refertazione')}
 
   <section class="sez"><div class="wrap split">
+    <div>
+      <span class="sopra" data-su>Com’è nato</span>
+      <h2 class="h2" data-split>Un solo centro per la salute della donna</h2>
+      <p class="lead" data-su>Avenir nasce dall’idea di riunire in un unico luogo le visite e gli esami di cui una donna ha bisogno nel corso della vita: senologia, ginecologia e radiologia.</p>
+      <p data-su style="margin-top:18px;color:var(--grigio);max-width:56ch">Medici specialisti con esperienza ospedaliera e tecnologia di ultima generazione, a partire dalla mammografia 3D con tomosintesi, per una prevenzione accurata, senza lunghe attese e con il tempo di spiegare ogni risultato.</p>
+      <div class="righe">
+        {riga('scudo', 'Prevenzione accurata', 'Esami di qualità e medici esperti')}
+        {riga('cal', 'Tutto in una mattina', 'Visita ed esami nello stesso appuntamento, quando possibile')}
+        {riga('cuore', 'Il tempo che serve', 'Ogni risultato spiegato con calma')}
+      </div>
+    </div>
+    <div class="split-foto"><img src="assets/img/donna1.jpg" alt="Ritratto di una donna al tramonto" loading="lazy"></div>
+  </div></section>
+
+  <section class="sez" style="padding-top:0"><div class="wrap split">
     <div>
       <span class="sopra" data-su>Il nome e il logo</span>
       <h2 class="h2" data-split>Avenir vuol dire futuro</h2>
@@ -376,70 +442,33 @@ chi = f'''
     </div>
   </div></section>
 
-  <section class="sez" style="padding-top:0"><div class="wrap split" style="align-items:start">
+  <section class="sez" id="dove" style="padding-top:0"><div class="wrap split" style="align-items:stretch">
     <div>
-      <span class="sopra" data-su>La nostra storia</span>
-      <h2 class="h2" data-split>Come siamo arrivati qui</h2>
-      <p class="lead" data-su>Dalla Breast Unit di uno dei principali ospedali di Roma a uno studio dedicato alla salute della donna.</p>
-    </div>
-    <div class="tempo" data-tempo>
-      <div class="tempo-linea"><i></i></div>
-      <div class="tappa"><b>San Camillo Forlanini</b><h3>Primario della Senologia</h3><p>La dottoressa Svegliati guida la Diagnostica per Immagini in Senologia e la Breast Unit, insieme a chirurgia oncologica, oncologia medica e radioterapia.</p></div>
-      <div class="tappa"><b>2025</b><h3>Nasce “Pronto Nodulo”</h3><p>Al San Camillo parte un canale dedicato alle donne con un’anomalia al seno che hanno bisogno di una risposta rapida.</p></div>
-      <div class="tappa"><b>2025</b><h3>Nasce Praemedica</h3><p>Un centro diagnostico polispecialistico, con un approccio multidisciplinare che mette il paziente al centro.</p></div>
-      <div class="tappa"><b>2026</b><h3>Mammografia con intelligenza artificiale</h3><p>Al San Camillo la senologia integra l’IA nei mammografi di ultima generazione.</p></div>
-      <div class="tappa"><b>2026</b><h3>Apre Avenir</h3><p>A Roma, in Viale Mazzini: senologia, ginecologia e radiologia nello stesso studio. <span class="segnaposto">data da confermare</span></p></div>
-    </div>
-  </div></section>
-
-  <section class="scuro"><div class="wrap split">
-    <div>
-      <a href="https://praemedica.it" target="_blank" rel="noopener" data-su style="display:inline-block;margin-bottom:22px"><img src="assets/img/praemedica-logo-bianco.png" alt="Praemedica" width="617" height="124" style="height:44px;width:auto"></a>
-      <h2 class="h2" data-split>Il partner organizzativo</h2>
-      <p class="lead" data-su>Praemedica è un centro diagnostico polispecialistico nato nel 2025, con oltre venti specialità e una diagnostica per immagini completa. Porta ad Avenir la sua organizzazione: prenotazioni, accoglienza e tempi di attesa brevi.</p>
+      <span class="sopra" data-su>Dove siamo</span>
+      <h2 class="h2" data-split>Nel cuore di Roma</h2>
+      <p class="lead" data-su>Siamo in Viale Giuseppe Mazzini 142, nel quartiere Della Vittoria, a pochi minuti da Piazza Mazzini e dal quartiere Prati.</p>
       <div class="righe">
-        {riga('scudo', 'Più di 20 specialità', 'Dalla cardiologia all’ortopedia')}
-        {riga('strati', 'Diagnostica per immagini', 'Mammografia 3D, MOC, radiografie')}
-        {riga('cal', 'Prenotazioni semplici', 'Telefono, WhatsApp e online')}
+        {riga('pin', 'Viale Giuseppe Mazzini 142, Roma', 'Indirizzo da confermare')}
+        {riga('scintilla', 'Con i mezzi', 'Metro A e autobus nelle vicinanze: indicazioni da completare')}
+        {riga('cal', 'Orari e contatti', 'Telefono, WhatsApp e orari della segreteria', 'contatti.html')}
       </div>
-      <div style="margin-top:28px" data-su>{btn('Visita il sito di Praemedica', 'https://praemedica.it', 'btn-chiaro', extra=' target="_blank" rel="noopener"')}</div>
     </div>
-    <div class="split-foto"><img src="assets/img/pm-opt.jpg" alt="L’ortopantomografo di Praemedica" loading="lazy"></div>
+    <iframe class="mappa" title="Mappa: Viale Giuseppe Mazzini 142, Roma" src="https://maps.google.com/maps?q=Viale%20Giuseppe%20Mazzini%20142%20Roma&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div></section>
 
-  <section class="sez" id="dottoressa"><div class="wrap dott-grid">
-    <div class="dott-foto" data-par="-6"><img src="assets/img/svegliati-ritratto.jpg" alt="La dottoressa Francesca Svegliati, in camice bianco, alla scrivania dello studio" loading="lazy"></div>
-    <div>
-      <span class="sopra" data-su>La dottoressa</span>
-      <h2 class="h2" data-split>Francesca Svegliati</h2>
-      <p class="lead" data-su style="margin-top:12px">Medico specialista in Diagnostica per Immagini, con una consolidata esperienza in senologia.</p>
-      <p data-su style="margin-top:18px;color:var(--grigio);max-width:56ch">Fino ad agosto 2026 ha guidato la Diagnostica per Immagini in Senologia e la Breast Unit del San Camillo Forlanini, lavorando ogni giorno insieme a chirurghi, oncologi e radioterapisti. Ha organizzato i percorsi diagnostico-terapeutici della Breast Unit e porta avanti l’attività di divulgazione con seminari e conferenze sulla prevenzione.</p>
-      <ul class="cred">
-        <li data-su><svg><use href="#i-check"/></svg><span><b>Formazione</b> · Laurea in Medicina alla Sapienza di Roma, specializzazione in Radiologia</span></li>
-        <li data-su><svg><use href="#i-check"/></svg><span><b>San Camillo Forlanini</b> · Primario di Diagnostica per Immagini in Senologia e Responsabile della Breast Unit</span></li>
-        <li data-su><svg><use href="#i-check"/></svg><span><b>Villa Benedetta</b> · Direzione scientifica del Centro di Senologia</span></li>
-      </ul>
-      <div data-su style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px">{btn('Prenota con la dottoressa', 'contatti.html#prenota')}<a class="btn btn-vuoto" href="https://www.francescasvegliati.it" target="_blank" rel="noopener">Il suo sito personale</a></div>
+  <section class="sez" style="padding-top:0"><div class="wrap">
+    {testa('I nostri valori', 'Quello in cui crediamo')}
+    <div class="valori">
+      <div class="dato" data-su>{ico('scudo')}<b>Esperienza</b><small>Medici specialisti con anni di attività ospedaliera.</small></div>
+      <div class="dato" data-su>{ico('strati')}<b>Tecnologia</b><small>Strumenti di nuova generazione per immagini più chiare.</small></div>
+      <div class="dato" data-su>{ico('cuore')}<b>Ascolto</b><small>Il tempo di spiegare, rispondere e rassicurare.</small></div>
+      <div class="dato" data-su>{ico('scintilla')}<b>Prevenzione</b><small>Controlli regolari, per guardare avanti con serenità.</small></div>
     </div>
   </div></section>
-
-  <section class="sez" id="ad-avenir" style="padding-top:0"><div class="wrap split" style="align-items:start">
-    <div>
-      <span class="sopra" data-su>Con la dottoressa</span>
-      <h2 class="h2" data-split>Cosa fa per te ad Avenir</h2>
-      <p class="lead" data-su>Ad Avenir la dottoressa Svegliati segue la senologia: tre esami, che si possono fare anche nella stessa mattina.</p>
-    </div>
-    <div class="righe">
-      {riga('cuore', 'Visita senologica', 'Colloquio, esame clinico e lettura dei tuoi esami', 'visita-senologica.html')}
-      {riga('scudo', 'Ecografia mammaria', 'Ultrasuoni, senza radiazioni e indolore', 'ecografia-mammaria.html')}
-      {riga('strati', 'Mammografia 3D con tomosintesi', 'Il seno ricostruito in strati sottili', 'mammografia-3d.html')}
-    </div>
-  </div></section>
-
 
   {cta('Vieni a conoscerci', 'Chiama la segreteria per fissare la tua prima visita.', 'donna4.jpg')}
-'''
-pagina('chi-siamo.html', 'Chi siamo · Avenir Medical Care', 'La storia di Avenir Medical Care, la dottoressa Francesca Svegliati e Praemedica.', 'chi-siamo.html', chi)
+"""
+pagina('chi-siamo.html', 'Chi siamo · Avenir Medical Care', 'Avenir Medical Care: un poliambulatorio a Roma dedicato alla salute della donna.', 'chi-siamo.html', chi)
 
 # =============================================================== CONTATTI
 opzioni = ''.join(f'<option>{o}</option>' for o in ['Visita senologica', 'Mammografia 3D con tomosintesi', 'Ecografia mammaria', 'Visita + esami senologici', 'Visita ginecologica', 'Pap test / HPV test', 'Radiologia', 'Non lo so, ho bisogno di un consiglio'])

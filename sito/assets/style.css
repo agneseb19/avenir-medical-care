@@ -607,15 +607,6 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
   .hero:not(.senza-media) .etichetta { background: rgba(255,255,255,.16); color: #fff; border-color: rgba(255,255,255,.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 }
 
-/* logo Praemedica */
-.partner { display: inline-flex; align-items: center; gap: 16px; margin-top: 30px; padding: 14px 20px; background: #fff; border: 1px solid var(--bordo); border-radius: 18px; transition: transform .45s var(--ease), box-shadow .45s; }
-.partner:hover { transform: translateY(-3px); box-shadow: var(--ombra); }
-.partner span { font-size: 13.5px; color: var(--grigio); white-space: nowrap; }
-.partner img { height: 34px; width: auto; }
-.partner-piede { margin-top: 20px; padding: 0; border: 0; background: none; flex-direction: column; align-items: flex-start; gap: 8px; }
-.partner-piede:hover { transform: none; box-shadow: none; opacity: .8; }
-.partner-piede img { height: 30px; }
-@media (max-width: 760px) { .partner { flex-direction: column; align-items: flex-start; gap: 8px; } .partner img { height: 30px; } }
 
 /* telefono: pulsanti della hero affiancati */
 @media (max-width: 760px) {
@@ -627,17 +618,7 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
 }
 @media (max-width: 760px) { .hero-azioni { justify-content: center !important; } }
 
-/* Home: l'incontro tra Praemedica e la dottoressa */
-.incontro { display: flex; align-items: stretch; gap: 12px; margin-top: 32px; }
-.inc-voce { flex: 1 1 0; display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 76px; padding: 12px 18px; background: #fff; border: 1px solid var(--bordo); border-radius: 20px; transition: transform .45s var(--ease), box-shadow .45s; }
-.inc-voce:hover { transform: translateY(-3px); box-shadow: var(--ombra); }
-.inc-logo { height: 34px; width: auto; max-width: 100%; }
-.inc-foto { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center; flex: none; box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px var(--rosa); }
-.inc-voce b { display: block; font-size: 14.5px; font-weight: 600; letter-spacing: -.01em; line-height: 1.25; }
-.inc-voce small { display: block; font-size: 13px; color: var(--grigio); }
-.inc-piu { align-self: center; flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--rosa); color: #fff; display: grid; place-items: center; font-size: 20px; font-weight: 500; line-height: 1; }
 .intro-dati { margin-top: 20px; }
-@media (max-width: 760px) { .incontro { flex-direction: column; gap: 8px; } .inc-piu { width: 30px; height: 30px; font-size: 18px; } .inc-voce { justify-content: flex-start; } .inc-voce b { font-size: 16px; } .inc-voce small { font-size: 14.5px; } }
 
 /* ================= TELEFONO COME UN'APP ================= */
 .solo-mob, .barra-azioni { display: none; }
@@ -710,35 +691,6 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
 .cred li b { font-weight: 600; color: var(--testo); }
 .cred li span { color: var(--grigio); }
 
-/* telefono: Praemedica e dottoressa affiancati */
-@media (max-width: 760px) {
-  .incontro { flex-direction: row !important; align-items: stretch; gap: 6px; margin-top: 24px; }
-  .inc-voce { flex: 1 1 0; min-width: 0; min-height: 0; padding: 14px 10px; border-radius: 18px; flex-direction: column; justify-content: center !important; align-items: center; text-align: center; gap: 8px; }
-  .inc-logo { height: auto; width: 100%; max-width: 132px; }
-  .inc-foto { width: 44px; height: 44px; }
-  .inc-voce b { font-size: 14px !important; line-height: 1.2; }
-  .inc-voce small { font-size: 13px !important; }
-  .inc-piu { width: 26px !important; height: 26px !important; font-size: 16px !important; }
-}
-
-/* + centrato tra i due riquadri e riquadri compatti */
-.incontro { position: relative; gap: 14px; }
-.inc-piu { position: absolute !important; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2; width: 32px !important; height: 32px !important; padding: 0; font-size: 0 !important; box-shadow: 0 0 0 4px var(--carta); }
-.inc-piu::before, .inc-piu::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; border-radius: 1px; background: #fff; transform: translate(-50%, -50%); }
-.inc-piu::after { transform: translate(-50%, -50%) rotate(90deg); }
-@media (max-width: 760px) {
-  .incontro { gap: 10px; }
-  .inc-voce { flex-direction: row !important; justify-content: center !important; text-align: left; min-height: 64px; padding: 10px 12px; gap: 8px; border-radius: 16px; }
-  .inc-logo { max-width: 104px; }
-  .inc-foto { width: 34px; height: 34px; box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--rosa); }
-  .inc-voce b { font-size: 13px !important; line-height: 1.2; }
-  .inc-voce small { display: none; }
-  .inc-piu { width: 26px !important; height: 26px !important; }
-  .inc-piu::before, .inc-piu::after { width: 10px; }
-}
-@media (max-width: 760px) { .nasc-mob { display: none; } .incontro .inc-voce + .inc-piu + .inc-voce { padding-left: 20px; } }
-.incontro .inc-voce { flex: 1 1 50% !important; box-sizing: border-box; }
-@media (max-width: 760px) { .incontro .inc-voce + .inc-piu + .inc-voce { padding-left: 22px; padding-right: 8px; } .incontro .inc-voce:first-child { padding-right: 22px; padding-left: 8px; } }
 
 /* telefono: sezione mammografia 3D compatta */
 @media (max-width: 760px) {
@@ -783,3 +735,37 @@ a.contatto:hover { transform: translateY(-6px); box-shadow: var(--ombra); }
 /* blocco finale: la foto copre sempre tutto il riquadro, anche durante la parallasse */
 .cta-bg { inset: -14% 0 !important; }
 .cta-bg img { height: 100% !important; }
+
+/* aree cliccabili nell'introduzione */
+.aree .dato { transition: transform .45s var(--ease), box-shadow .45s, border-color .3s; }
+.aree .dato:hover { transform: translateY(-5px); box-shadow: var(--ombra); border-color: transparent; }
+/* perché scegliere Avenir */
+.motivi { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.motivi .dato { padding: 26px; }
+.motivi .dato b { font-size: 17px; }
+.motivi .dato small { font-size: 14.5px; }
+.perche-azioni { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.mega-tutte { font-size: 14px; color: var(--blu); }
+.mega-tutte b { font-weight: 600; }
+@media (max-width: 960px) { .motivi { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 760px) {
+  .motivi { gap: 10px; }
+  .motivi .dato { padding: 16px; }
+  .motivi .dato b { font-size: 15.5px; margin-top: 10px; }
+  .motivi .dato small { font-size: 14.5px; }
+  .perche-azioni { margin-top: 20px; }
+  .perche-azioni .btn { flex: 1 1 auto; justify-content: center; }
+  .perche-azioni .btn .ico { display: none; }
+}
+
+/* pagina Medici: stato "profili in arrivo" */
+.medici-vuoto { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.medico-area { display: flex; flex-direction: column; gap: 8px; padding: 28px; background: #fff; border: 1px dashed rgba(31, 58, 95, .25); border-radius: 24px; transition: transform .45s var(--ease), box-shadow .45s, border-color .3s; }
+.medico-area:hover { transform: translateY(-5px); box-shadow: var(--ombra); border-color: transparent; }
+.medico-area .riga-ico { margin-bottom: 10px; }
+.medico-area b { font-size: 20px; font-weight: 600; letter-spacing: -.02em; }
+.medico-area small { font-size: 14.5px; color: var(--grigio); }
+.medici-nota { margin-top: 28px; color: var(--grigio); }
+.medici-nota a { color: var(--blu); font-weight: 600; }
+@media (max-width: 760px) { .medici-vuoto { grid-template-columns: 1fr; gap: 10px; } .medico-area { flex-direction: row; align-items: center; padding: 16px 18px; gap: 14px; } .medico-area .riga-ico { margin: 0; } .medico-area b { font-size: 17px; } .medico-area small { margin-left: auto; } }
+@media (max-width: 760px) { .intro-dati.aree { display: none !important; } }
